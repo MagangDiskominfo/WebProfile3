@@ -1,0 +1,20 @@
+body {
+    background-color: auto;
+}
+
+/* Style untuk navbar yang dapat digeser ke kiri dan kanan */
+.navbar-nav-container {
+    overflow-x: auto; /* Memungkinkan konten navbar digulir secara horizontal */
+    white-space: nowrap; /* Mencegah item navbar membungkus ke baris berikutnya */
+}
+
+.navbar-nav {
+    display: inline-block; /* Menampilkan elemen ul sebagai elemen inline-block */
+    padding-left: 750px; /* Menghapus padding default */
+    margin-bottom: 0; /* Menghapus margin bawah default */
+}
+
+.nav-item {
+    display: inline-block;
+}
+
