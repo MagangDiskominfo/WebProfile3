@@ -21,9 +21,6 @@
         <li class="nav-item">
             <a class="nav-link" href="/galeri">Galeri</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/dashboard">Dashboard</a>
-        </li>
     </ul>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sed dolor hic consequuntur aut totam? 
         Facilis quam eius obcaecati nihil iusto, molestias maxime, commodi sed voluptatem excepturi provident 

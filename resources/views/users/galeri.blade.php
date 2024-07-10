@@ -23,9 +23,6 @@
         <li class="nav-item">
             <a class="nav-link" href="/galeri">Galeri</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/dashboard">Dashboard</a>
-        </li>
     </ul>
 </body>
 </html>
