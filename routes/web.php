@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\PostBerita;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostHome;
 
-//USERS
-Route::get('/users/beranda', function () {
+// USERS
+Route::get('/', function(){
     return view('users.beranda');
 });
 
@@ -19,7 +21,7 @@ Route::get('/galeri', function () {
     return view('users.galeri');
 });
 
-//ADMIN
+// ADMIN
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
@@ -51,3 +53,6 @@ Route::get('/admin/struktur', function () {
 Route::get('/admin/footer', function () {
     return view('admin.footer');
 });
+
+Route::post('/admin/home/update', [PostHome::class, 'update']);
+Route::post('/admin/berita/add', [PostBerita::class, 'store']);
