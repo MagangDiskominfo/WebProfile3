@@ -2,19 +2,97 @@ body {
     background-color: auto;
 }
 
+.text-primary {
+    color: #002D85 !important;
+}
+
 /* Style untuk navbar yang dapat digeser ke kiri dan kanan */
 .navbar-nav-container {
     overflow-x: auto; /* Memungkinkan konten navbar digulir secara horizontal */
     white-space: nowrap; /* Mencegah item navbar membungkus ke baris berikutnya */
 }
 
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Pastikan z-index cukup tinggi untuk menempatkan navbar di atas konten lainnya */
+}
+
 .navbar-nav {
     display: inline-block; /* Menampilkan elemen ul sebagai elemen inline-block */
-    padding-left: 750px; /* Menghapus padding default */
+    /* padding-left: 500px; Menghapus padding default */
     margin-bottom: 0; /* Menghapus margin bawah default */
 }
 
 .nav-item {
     display: inline-block;
+    /* margin-left: 1.5rem */
+}
+.custom-padding {
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
+.position-relative {
+    position: relative; 
+    /* background-size: cover; */
+    background-position: center center; 
+    height: 713px; /* Sesuaikan tinggi sesuai kebutuhan */
+}
+
+
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/gradian.svg');
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.7; /* Sesuaikan tingkat transparansi gradien */
+}
+
+.content {
+    /* color: white;
+    text-align: center;
+    font-size: 24px; */
+    padding-top: 62px; /* Contoh padding di dalam konten */
+}
+
+
+
+/* Section Berita */
+/* .news-section {
+    padding: 50px 0;
+} */
+.news-title {
+    text-align: center;
+    color: #002D85;
+    margin-bottom: 30px;
+}
+.news-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    margin: 20px;
+    
+}
+.news-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.news-card-body {
+    padding: 20px;
+}
+.news-card-button {
+    background-color: #002D85;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
