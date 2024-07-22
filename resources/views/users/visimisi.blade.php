@@ -10,7 +10,11 @@
     <h1>Visi Misi</h1>
     <ul class="navbar-nav px-2">
         <li class="nav-item">
+<<<<<<< HEAD
             <a href="/">Beranda</a>
+=======
+            <a href="{{ url('/') }}">Beranda</a>
+>>>>>>> 5329460f29acf23c6db81ef4f47d79f663c52614
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/visimisi">Visi Misi</a>

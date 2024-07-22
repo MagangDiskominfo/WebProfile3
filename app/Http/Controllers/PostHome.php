@@ -30,6 +30,10 @@ class PostHome extends Controller
             $home = new Home();
         }
 
+        if(!$home){
+            $home = new Home();
+        }
+
         // Memproses unggahan logo
         if ($request->hasFile('logo')) {
             // Hapus logo lama jika ada
