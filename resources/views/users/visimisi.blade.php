@@ -10,7 +10,7 @@
     <h1>Visi Misi</h1>
     <ul class="navbar-nav px-2">
         <li class="nav-item">
-            <a href="{{ url('/users/beranda') }}">Beranda</a>
+            <a href="/">Beranda</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/visimisi">Visi Misi</a>

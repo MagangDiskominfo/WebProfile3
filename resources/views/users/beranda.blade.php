@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item ms-5">
-                        <a class="nav-link text-white fs-6 font-family-Poppins" href="{{ url('/users/beranda') }}">Beranda</a>
+                        <a class="nav-link text-white fs-6 font-family-Poppins" href="/">Beranda</a>
                     </li>
                     <li class="nav-item ms-5">
                         <a class="nav-link text-white fs-6 font-family-Poppins" href="/visimisi">Visi Misi</a>
@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                     <li class="nav-item ms-5">
-                        <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="#">Masuk</a>
+                        <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="/login">Masuk</a>
                     </li>
                 </ul>
             </div>

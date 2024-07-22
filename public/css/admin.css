@@ -1,74 +1,116 @@
 body {
-    font-size: 0.875rem;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f8f8f8;
 }
 
 .sidebar {
+    width: 250px;
+    background-color: #003f88;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    padding: 48px 0 0;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
-.sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 48px);
-    padding-top: 0.5rem;
-    overflow-x: hidden;
-    overflow-y: auto;
+.sidebar img {
+    width: 150px;
+    margin-bottom: 20px;
 }
 
-.nav-link {
-    font-size: 15px;
+.sidebar h2 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
 }
 
-.nav-link.active {
-    color: #000000;
-}
-
-.nav-link:hover {
-    color: #403636;
-}
-
-.nav-link.collapsed {
-    color: #6c757d;
-}
-
-.nav-link.collapsed:hover {
-    color: #26282b;
-}
-
-.collapse .nav-link {
-    color: #6c757d;
-}
-
-.collapse .nav-link:hover {
-    color: #403636;
-}
-
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.sidebar .nav-link .feather {
-    width: 1.5em;
-    height: 1em;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 110%;
-    background-color: #f8f9fa;
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    width: 100%;
     text-align: center;
     padding: 10px;
-    border-top: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #004fcf;
 }
 
+.sidebar a:hover {
+    background-color: #005fef;
+}
 
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 20px;
+}
 
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.main-content form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content form h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.main-content form p {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input[type="file"] {
+    padding: 3px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003f88;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #002f6c;
+}

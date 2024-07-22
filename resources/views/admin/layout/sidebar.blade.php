@@ -15,26 +15,22 @@
                 <div id="informasiSubMenu" class="collapse">
                     <ul class="nav flex-column ml-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin/home') }}">Home</a>
+                            <a class="nav-link" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin/berita') }}">Berita</a>
+                            <a class="nav-link" href="/berita">Berita</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin/kegiatan') }}">Kegiatan</a>
+                            <a class="nav-link" href="/kegiatan">Kegiatan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/admin/lokasi') }}">Lokasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin/visimisi') }}">VisiMisi</a>
+                            <a class="nav-link" href="/visimisi">VisiMisi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/admin/struktur') }}">Struktur</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin/footer') }}">Footer</a>
-                        </li>
                     </ul>
                 </div>
             </li>
@@ -55,13 +51,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/logout">
                     <span data-feather="log-out"></span>
                     Logout
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/users/beranda') }}">
+                <a class="nav-link" href="/">
                     <span data-feather="home"></span>
                     Beranda
                 </a>

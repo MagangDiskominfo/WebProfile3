@@ -1,6 +1,6 @@
 @extends('/admin/dashboard')
 @section('content')
-    <form action="/admin/home/update" method="POST" enctype="multipart/form-data">
+    <form action="/home" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="logo">Logo</label>
@@ -17,3 +17,4 @@
         <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
     </form>
 @endsection
+
