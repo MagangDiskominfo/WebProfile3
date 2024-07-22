@@ -42,7 +42,7 @@
                 <div id="berandaSubMenu" class="collapse">
                     <ul class="nav flex-column ml-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Foto</a>
+                            <a class="nav-link" href="/foto">Foto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Vidio</a>
@@ -54,12 +54,6 @@
                 <a class="nav-link" href="/logout">
                     <span data-feather="log-out"></span>
                     Logout
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/">
-                    <span data-feather="home"></span>
-                    Beranda
                 </a>
             </li>
         </ul>

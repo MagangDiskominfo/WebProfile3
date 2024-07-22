@@ -51,5 +51,7 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::post('/struktur', [PostStruktur::class, 'poststruktur']);
     Route::get('/struktur', [PostStruktur::class, 'struktur']);
 
+    Route::get('/foto', function() {return view('admin.foto');});
+
     Route::get('/logout', [login::class, 'logout']);
 });
