@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
         <div class="container custom-padding">
             <a class=" navbar-brand " href="#">
-                <img src="{{ asset('../img/prov.png') }}" alt="Logo" style="height: 40px;">
+                <img src="{{ asset('../img/diskom.png') }}" alt="Logo" style="height: 40px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,9 +51,9 @@
             <div class="overlay-gradient"></div>
                 <div class="position-relative text-justify " style="padding-top: 110px;">
                     <div class="container custom-padding">
-                    <h1 class="text-white font-family-Poppins"><b>PEMERINTAH <br> PROVINSI JAMBI</b></h1>
+                    <h1 class="text-white font-family-Poppins"><b>DINAS KOMUNIKASI DAN <br> INFORMATIKA KOTA JAMBI</b></h1>
                     <h4 class="text-white mt-4 ">
-                        Selamat Datang, <br> di Situs Resmi Pemerintah Provinsi Jambi. Temukan informasi <br>dan berita terkini tentang Pemerintah Kota Jambi atau jelajahi <br>lebih banyak informasi mengenai Provinsi Jambi. Nikmati akses <br> mudah ke layanan publik, pembaruan terbaru, dan berbagai <br>sumber daya yang bermanfaat untuk masyarakat Jambi.
+                        Selamat Datang, <br> di Situs Resmi Dinas Komunikasi dan Informatika Kota Jambi. <br> Temukan informasi dan berita terkini tentang Kota Jambi  <br> atau jelajahi lebih banyak informasi mengenai Kota Jambi.<br> Nikmati akses  mudah ke layanan publik, pembaruan terbaru,<br> dan berbagai sumber daya yang bermanfaat untuk <br> masyarakat Jambi.
                     </h4>
                 </div>
             </div>
@@ -207,12 +207,20 @@
             </div>
         </section> --}}
 
+
+        @php
+        $lokasi_link = DB::table('lokasi')->value('lokasi_link');
+        @endphp
         <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
                 <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p>
-                <p class="text-primary">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id diam in leo eleifend fermentum. Nullam suscipit turpis nec lorem vehicula, ac rutrum orci efficitur.
-                </p>
+                <div class="col text-center">
+                    <div class="card maps-card mx-4 ">
+                        <div class="card-body">
+                            <iframe src="{{ $lokasi_link }}" width="1100" height="500" style="border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -226,12 +234,12 @@
                 <div class="row ">
                     <div class="col-md-6">
                         <a class=" navbar-brand " href="#">
-                            <img src="{{ asset('../img/prov.png') }}" alt="Logo" style="height: 40px;">
+                            <img src="{{ asset('../img/diskom.png') }}" alt="Logo" style="height: 35px;">
                         </a>
                         <div class="pt-2">
-                            <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i> Jambi, Provinsi Jambi </p>
-                            <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i> 081234567890</p>
-                            <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i> pemerintahprovinsijambi@gmail.com</p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i> Kota Jambi, Jambi </p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i> 0741444953</p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i> diskominfokotajambi@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-end">
@@ -247,7 +255,7 @@
             <div class="container text-center">
                 {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
                 <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
-                <p>Copyright &copy; Pemerintah Provinsi Jambi 2024</p>
+                <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
             </div>
         </div>
     </footer>
