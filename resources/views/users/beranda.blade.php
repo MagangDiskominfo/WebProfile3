@@ -6,43 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Halaman Beranda</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
 </head>
 <body style="background-color: #002D85">
     <!-- Navigasi di bagian atas -->
     <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
         <div class="container custom-padding">
-        <a class=" navbar-brand " href="#">
-            <img src="{{ asset('../img/diskom.png') }}" alt="Logo" style="height: 40px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item ms-5">
-                        <a class="nav-link text-white fs-6 font-family-Poppins" href="{{ url('/users/beranda') }}">Beranda</a>
-                    </li>
-                    <li class="nav-item ms-5">
-                        <a class="nav-link text-white fs-6 font-family-Poppins" href="/visimisi">Visi Misi</a>
-                    </li>
-                    <li class="nav-item ms-5">
-                        <a class="nav-link text-white fs-6 font-family-Poppins" href="/struktur">Struktur Organisasi</a>
-                    </li>
-                    <li class="nav-item ms-5 dropdown">
-                        <button class="nav-link btn dropdown-toggle text-white fs-6 font-family-Poppins" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Galeri <i class="bi bi-chevron-down"></i>
-                        </button>
-                        <ul class="dropdown-menu ">
-                            <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
-                            <li><a class="dropdown-item fw-bold text-primary" href="#">Video</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item ms-5">
-                        <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="#">Masuk</a>
-                    </li>
-                </ul>
-            </div>
+            <a class=" navbar-brand " href="#">
+                <img src="{{ asset('../img/prov.png') }}" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-5">
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="{{ url('/') }}">Beranda</a>
+                        </li>
+                        <li class="nav-item ms-5">
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/visimisi">Visi Misi</a>
+                        </li>
+                        <li class="nav-item ms-5">
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/struktur">Struktur Organisasi</a>
+                        </li>
+                        <li class="nav-item ms-5 dropdown">
+                            <button class="nav-link btn dropdown-toggle text-white fs-6 font-family-Poppins" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Galeri <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
+                                <li><a class="dropdown-item fw-bold text-primary" href="#">Video</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ms-5">
+                            <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="#">Masuk</a>
+                        </li>
+                    </ul>
+                </div>
         </div>
     </nav>
     <header class="content">
@@ -69,93 +70,189 @@
             </div>
         </section> --}}
 
-         <!-- Section Berita -->
-    <section id="berita" class="news-section bg-white ">
-        <div class="container">
-            <p class="text-center text-primary fs-1 fw-bold font-family-Poppins  m-0 px-3 py-4">Berita</p>
-            <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card news-card ">
-                                    <div class="col-md-4">
-                                    <img src="path-to-your-image.jpg" class="card-img-left" alt="Berita 1">
-                                </div>
-                                    <div class="card-body news-card-body">
-                                        <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                        <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
-                                        <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+        <!-- Section Berita -->
+        <section id="berita" class="news-section bg-white pb-4">
+            <div class="container">
+                <p class="text-center text-primary fs-1 fw-bold font-family-Poppins  m-0 px-3 py-4">Berita</p>
+                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card news-card ">
+                                        <div class="">
+                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 1">
+                                    </div>
+                                    <div class="">
+                                        <div class="card-body news-card-body">
+                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
+                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card news-card ">
-                                    <img src="path-to-your-image.jpg" class="card-img-top" alt="Berita 2">
-                                    <div class="card-body news-card-body">
-                                        <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                        <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
-                                        <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                <div class="col-md-6">
+                                    <div class="card news-card ">
+                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 2">
+                                        <div class="card-body news-card-body">
+                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
+                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                        </div>
                                     </div>
                                 </div>
+                                
                             </div>
-                            
                         </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card news-card ">
+                                        <div class="">
+                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 1">
+                                    </div>
+                                    <div class="">
+                                        <div class="card-body news-card-body">
+                                            <h5 class="card-title">(1)Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
+                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card news-card ">
+                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 2">
+                                        <div class="card-body news-card-body">
+                                            <h5 class="card-title">(2)Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
+                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- Repeat for more carousel items -->
                     </div>
-                    <!-- Repeat for more carousel items -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <!-- Section Kegiatan -->
+        <section id="kegiatan" class="news-section bg-primary-custom pb-4 ">
+            <div class="container">
+                <p class="text-center text-white fs-1 fw-bold font-family-Poppins  m-0 px-3 py-4">Kegiatan</p>
+                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card news-card ">
+                                        <div class="">
+                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 1">
+                                    </div>
+                                    <div class="">
+                                        <div class="card-body news-card-body">
+                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
+                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card news-card ">
+                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 2">
+                                        <div class="card-body news-card-body">
+                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
+                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- Repeat for more carousel items -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
 
-        <section id="kegiatan" class="py-5">
+        {{-- <section id="kegiatan" class="py-5">
             <div class="container">
                 <h2 class="text-white mb-4">Kegiatan</h2>
                 <p class="text-white">
                     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id diam in leo eleifend fermentum. Nullam suscipit turpis nec lorem vehicula, ac rutrum orci efficitur.
                 </p>
             </div>
-        </section>
+        </section> --}}
 
-        <section id="lokasi" class="py-5">
+        <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
-                <h2 class="text-white mb-4">Lokasi</h2>
-                <p class="text-white">
+                <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p>
+                <p class="text-primary">
                     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id diam in leo eleifend fermentum. Nullam suscipit turpis nec lorem vehicula, ac rutrum orci efficitur.
                 </p>
             </div>
         </section>
 
-        <section id="galeri" class="py-5">
-            <div class="container">
-                <h2 class="text-white mb-4">Galeri</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <img src="..." alt="Foto 1" class="img-fluid">
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <img src="..." alt="Foto 2" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved.</p>
+    <footer class="bg-primary-custom text-white py-4">
+        <div class=" text-white position-absolute  start-0 w-100 py-2 ">
+            <div class="container custom-padding">
+                <div class="row ">
+                    <div class="col-md-6">
+                        <a class=" navbar-brand " href="#">
+                            <img src="{{ asset('../img/prov.png') }}" alt="Logo" style="height: 40px;">
+                        </a>
+                        <div class="pt-2">
+                            <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i> Jambi, Provinsi Jambi </p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i> 081234567890</p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i> pemerintahprovinsijambi@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <ul class="list-unstyled ">
+                            <li class="mt-4 mb-2"><a class="text-white" href="{{ url('/') }}">Home</a></li>
+                            <li class="mb-2"><a class="text-white" href="/visimisi">Visi Misi</a></li>
+                            <li class="mb-2"><a class="text-white" href="/struktur">Struktur Organisasi</a></li>
+                            <li class="mb-2"><a class="text-white" href="/galeri">Galeri</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            <div class="container text-center">
+                {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
+                <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
+                <p>Copyright &copy; Pemerintah Provinsi Jambi 2024</p>
+            </div>
         </div>
     </footer>
+
+    
 
     <!-- Bootstrap JS Bundle (Popper.js included) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

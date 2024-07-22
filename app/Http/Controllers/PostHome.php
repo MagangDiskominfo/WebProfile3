@@ -21,6 +21,10 @@ class PostHome extends Controller
         // Mengambil data home dari database
         $home = Home::first(); // Ambil entri pertama dari tabel home
 
+        if(!$home){
+            $home = new Home();
+        }
+
         // Memproses unggahan logo
         if ($request->hasFile('logo')) {
             // Hapus logo lama jika ada

@@ -6,6 +6,10 @@ body {
     color: #002D85 !important;
 }
 
+.bg-primary-custom {
+    color: #002D85 !important;
+}
+
 /* Style untuk navbar yang dapat digeser ke kiri dan kanan */
 .navbar-nav-container {
     overflow-x: auto; /* Memungkinkan konten navbar digulir secara horizontal */
