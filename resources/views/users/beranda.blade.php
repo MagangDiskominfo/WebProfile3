@@ -13,39 +13,6 @@
     <!-- Navigasi di bagian atas -->
     <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
         <div class="container custom-padding">
-<<<<<<< HEAD
-        <a class=" navbar-brand " href="#">
-            <img src="{{ asset('../img/diskom.png') }}" alt="Logo" style="height: 40px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item ms-5">
-                        <a class="nav-link text-white fs-6 font-family-Poppins" href="/">Beranda</a>
-                    </li>
-                    <li class="nav-item ms-5">
-                        <a class="nav-link text-white fs-6 font-family-Poppins" href="/visimisi">Visi Misi</a>
-                    </li>
-                    <li class="nav-item ms-5">
-                        <a class="nav-link text-white fs-6 font-family-Poppins" href="/struktur">Struktur Organisasi</a>
-                    </li>
-                    <li class="nav-item ms-5 dropdown">
-                        <button class="nav-link btn dropdown-toggle text-white fs-6 font-family-Poppins" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Galeri <i class="bi bi-chevron-down"></i>
-                        </button>
-                        <ul class="dropdown-menu ">
-                            <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
-                            <li><a class="dropdown-item fw-bold text-primary" href="#">Video</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item ms-5">
-                        <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="/login">Masuk</a>
-                    </li>
-                </ul>
-            </div>
-=======
             <a class=" navbar-brand " href="#">
                 <img src="{{ asset('../img/prov.png') }}" alt="Logo" style="height: 40px;">
             </a>
@@ -65,7 +32,7 @@
                         </li>
                         <li class="nav-item ms-5 dropdown">
                             <button class="nav-link btn dropdown-toggle text-white fs-6 font-family-Poppins" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Galeri <i class="bi bi-chevron-down"></i>
+                                Galeri 
                             </button>
                             <ul class="dropdown-menu ">
                                 <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
@@ -73,11 +40,10 @@
                             </ul>
                         </li>
                         <li class="nav-item ms-5">
-                            <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="#">Masuk</a>
+                            <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="/login">Masuk</a>
                         </li>
                     </ul>
                 </div>
->>>>>>> 5329460f29acf23c6db81ef4f47d79f663c52614
         </div>
     </nav>
     <header class="content">
