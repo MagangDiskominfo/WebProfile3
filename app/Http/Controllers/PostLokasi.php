@@ -2,30 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\Lokasi; // Pastikan Anda sudah membuat model Lokasi
 use Illuminate\Http\Request;
 
 class PostLokasi extends Controller
 {
-    public function lokasi() {
-        return view('admin.lokasi');
+    public function lokasi()
+    {
+        return view('admin.lokasi'); // Pastikan path view yang benar
     }
 
-    public function postlokasi(Request $request) {
+    public function postlokasi(Request $request)
+    {
         // Validasi data yang diterima
         $validatedData = $request->validate([
-            'lokasi' => 'required|url',
+            'lokasi_link' => 'required|url',
         ]);
 
         // Ambil nilai dari request yang sudah divalidasi
-        $url = $validatedData['url'];
+        $url = $validatedData['lokasi_link'];
 
-        // Lakukan sesuatu dengan URL, misalnya menyimpannya ke database atau memprosesnya lebih lanjut
+        // Simpan URL ke database (menggunakan model Lokasi)
+        $result = Lokasi::create([
+            'lokasi_link' => $url,
+        ]);
 
-        // Contoh pengembalian response JSON (jika Anda ingin mengembalikan JSON)
-        // return response()->json(['message' => 'URL is valid', 'url' => $url], 200);
-
-        // Atau arahkan pengguna ke halaman lain setelah sukses
-        return redirect('/')->with('success', 'URL is valid');
+        // Arahkan pengguna ke halaman lain setelah sukses atau gagal
+        if ($result) {
+            return redirect('/');
+        } else {
+            return redirect('/dashboard');
+        }
     }
 }

@@ -1,6 +1,8 @@
 @extends('/admin/dashboard')
 @section('content')
     <form action="/home" method="POST" enctype="multipart/form-data">
+        <h2>Atur Home Website</h2>
+        <p>Silahkan isi dengan benar untuk membuat Home Website mu!</p>
         @csrf
         <div class="form-group">
             <label for="logo">Logo</label>

@@ -1,6 +1,8 @@
 @extends('/admin/dashboard')
 @section('content')
     <form action="/berita" method="POST" enctype="multipart/form-data">
+        <h2>Atur Berita Website</h2>
+        <p>Silahkan isi dengan benar untuk membuat Berita Website mu!</p>
         @csrf
         <div class="form-group">
             <label for="title">Judul Berita</label>

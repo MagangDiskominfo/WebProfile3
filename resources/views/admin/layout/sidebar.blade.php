@@ -24,13 +24,13 @@
                             <a class="nav-link" href="/kegiatan">Kegiatan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin/lokasi') }}">Lokasi</a>
+                            <a class="nav-link" href="/lokasi">Lokasi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/visimisi">VisiMisi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin/struktur') }}">Struktur</a>
+                            <a class="nav-link" href="/struktur">Struktur</a>
                     </ul>
                 </div>
             </li>

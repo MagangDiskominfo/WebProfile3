@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lokasi', function (Blueprint $table) {
+        Schema::create('struktur', function (Blueprint $table) {
             $table->id();
-            $table->string('url'); // Kolom untuk menyimpan URL
-            $table->timestamps(); // Kolom default Laravel untuk created_at dan updated_at
+            $table->string('struktur_gambar');
+            $table->timestamps();
+
         });
     }
 
