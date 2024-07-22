@@ -47,7 +47,9 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::post('/visimisi', [PostVisimisi::class, 'postvisimisi']);
     Route::get('/visimisi', [PostVisimisi::class, 'visimisi']);
     Route::post('/lokasi', [PostLokasi::class, 'postlokasi']);
-    Route::get('/lokasi', [PostLokasi::class, 'lokasi']);
+    // Route::get('/lokasi', [PostLokasi::class, 'lokasi']);
+    Route::get('/lokasi', [PostLokasi::class, 'lokasi'])->name('lokasi.form'); // Formulir untuk input atau update
+    Route::put('/lokasi', [PostLokasi::class, 'postlokasi'])->name('lokasi.update'); // Proses input atau update
     Route::post('/struktur', [PostStruktur::class, 'poststruktur']);
     Route::get('/struktur', [PostStruktur::class, 'struktur']);
 

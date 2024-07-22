@@ -9,7 +9,9 @@ class PostLokasi extends Controller
 {
     public function lokasi()
     {
-        return view('admin.lokasi'); // Pastikan path view yang benar
+        // $lokasi = Lokasi::first();
+        return view('admin.lokasi');
+        // ,['lokasi' => $lokasi]); Pastikan path view yang benar
     }
 
     public function postlokasi(Request $request)
@@ -23,12 +25,19 @@ class PostLokasi extends Controller
         $url = $validatedData['lokasi_link'];
 
         // Simpan URL ke database (menggunakan model Lokasi)
-        $result = Lokasi::create([
+        $lokasi = Lokasi::first();
+        if ($lokasi) {
+            //Update URL jika sudah ada
+            $lokasi->lokasi_link = $url;
+            $lokasi->save();
+        } else {
+            Lokasi::create([
             'lokasi_link' => $url,
         ]);
+        }
 
         // Arahkan pengguna ke halaman lain setelah sukses atau gagal
-        if ($result) {
+        if ($lokasi) {
             return redirect('/');
         } else {
             return redirect('/dashboard');

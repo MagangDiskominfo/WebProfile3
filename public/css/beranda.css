@@ -100,3 +100,11 @@ body {
 .carousel-control-prev, .carousel-control-next {
     filter: invert(100%);
 }
+
+
+.maps-card {
+    border-width: 3px; /* Atur lebar garis tepi */
+    border-color: #002D85 ; /* Atur warna garis tepi, bisa disesuaikan sesuai keinginan */
+    width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
+    display: inline-block; /* Agar lebar kartu sesuai dengan konten */
+}
