@@ -24,11 +24,11 @@
 
     </div>
 
-    <footer class="footer">
-        <div class="container">
+    {{-- <footer class="footer mt-auto- py-3">
+        <div class="container text-center">
             <span class="text-muted">Copyright@</span>
         </div>
-    </footer>
+    </footer> --}}
 
     <script>
         feather.replace(); // Initialize Feather Icons

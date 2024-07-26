@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
         <div class="container custom-padding">
             <a class=" navbar-brand " href="#">
-                <img src="{{ asset('../img/diskom.png') }}" alt="Logo" style="height: 40px;">
+                <img src="/storage/home/{{$home[0]->logo}}" alt="Logo" style="height: 40px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,17 +47,15 @@
         </div>
     </nav>
     <header class="content">
-        <div class="position-relative" style="background-image: url('../img/bg.png')">
+        <div class="position-relative" style="background-image: url('/storage/home/{{$home[0]->background_image}}')">
             <div class="overlay-gradient"></div>
                 <div class="position-relative text-justify " style="padding-top: 110px;">
                     <div class="container custom-padding">
-                    <h1 class="text-white font-family-Poppins"><b>DINAS KOMUNIKASI DAN <br> INFORMATIKA KOTA JAMBI</b></h1>
-                    <h4 class="text-white mt-4 ">
-                        Selamat Datang, <br> di Situs Resmi Dinas Komunikasi dan Informatika Kota Jambi. <br> Temukan informasi dan berita terkini tentang Kota Jambi  <br> atau jelajahi lebih banyak informasi mengenai Kota Jambi.<br> Nikmati akses  mudah ke layanan publik, pembaruan terbaru,<br> dan berbagai sumber daya yang bermanfaat untuk <br> masyarakat Jambi.
-                    </h4>
+                    <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi}}</b></h1>
+                    <h4 class="text-white mt-4 ">{{ $home[0]->deskripsi }}</h4>
                 </div>
             </div>
-        </div>
+        </div> 
     </header>
 
     <main>
@@ -78,34 +76,26 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
+                                @foreach ($berita as $item)
                                 <div class="col-md-6">
                                     <div class="card news-card ">
                                         <div class="">
-                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 1">
+                                        <img src="/storage/berita/{{$item->image_berita}}" class="card-img-top" alt="Berita 1">
                                     </div>
                                     <div class="">
                                         <div class="card-body news-card-body">
-                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <h5 class="card-title">{{$item->title }}</h5>
+                                            <p class="card-text">{{ $item->excerpt }}</p>
                                             <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
                                         </div>
                                     </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="card news-card ">
-                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 2">
-                                        <div class="card-body news-card-body">
-                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
-                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                                @endforeach
+                               
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        {{-- <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card news-card ">
@@ -133,7 +123,7 @@
                                 </div>
                                 
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- Repeat for more carousel items -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
@@ -156,31 +146,24 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
+                                @foreach ($kegiatan as $item)
+                                    
+                                
                                 <div class="col-md-6">
                                     <div class="card news-card ">
                                         <div class="">
-                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 1">
+                                        <img src="storage/kegiatan/{{ $item->gambar_kegiatan }}" class="card-img-top" alt="Berita 1">
                                     </div>
                                     <div class="">
                                         <div class="card-body news-card-body">
-                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
+                                            <h5 class="card-title">{{$item->judul_kegiatan }}</h5>
+                                            <p class="card-text">{{ $item->deskripsi_kegiatan }}</p>
                                             <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
                                         </div>
                                     </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="card news-card ">
-                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 2">
-                                        <div class="card-body news-card-body">
-                                            <h5 class="card-title">Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
-                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                                @endforeach
                             </div>
                         </div>
                         <!-- Repeat for more carousel items -->
@@ -206,18 +189,13 @@
                 </p>
             </div>
         </section> --}}
-
-
-        @php
-        $lokasi_link = DB::table('lokasi')->value('lokasi_link');
-        @endphp
         <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
                 <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p>
                 <div class="col text-center">
                     <div class="card maps-card mx-4 ">
                         <div class="card-body">
-                            <iframe src="{{ $lokasi_link }}" width="1100" height="500" style="border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="{{ $lokasi[0]->lokasi_link }}" width="1100" height="500" style="border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -228,8 +206,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-custom text-white py-4">
-        <div class=" text-white position-absolute  start-0 w-100 py-2 ">
+    <footer class="bg-primary-custom text-white pt-4">
+        <div class=" text-white start-0 w-100 py-2 ">
             <div class="container custom-padding">
                 <div class="row ">
                     <div class="col-md-6">

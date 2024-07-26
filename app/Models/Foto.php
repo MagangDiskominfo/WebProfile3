@@ -5,16 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Home extends Model
+class Foto extends Model
 {
     use HasFactory;
-    
-    protected $table = 'home';
-    public $home = 'home';
+    protected $foto = 'foto';
     protected $fillable = [
-        'logo',
-        'nama_instansi',
+        'upload_foto',
         'deskripsi',
-        'background_image',        
     ];
 }

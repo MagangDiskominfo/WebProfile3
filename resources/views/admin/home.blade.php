@@ -13,6 +13,10 @@
             <input type="text" class="form-control" id="nama_instansi" name="nama_instansi" required>
         </div>
         <div class="form-group">
+            <label for="deskripsi">Deskripsi</label>
+            <input type="text" class="form-control" id="deskripsi" name="deskripsi" required>
+        </div>
+        <div class="form-group">
             <label for="background_image">Gambar Latar Belakang</label>
             <input type="file" class="form-control" id="background_image" name="background_image">
         </div>

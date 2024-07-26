@@ -9,9 +9,7 @@ class PostLokasi extends Controller
 {
     public function lokasi()
     {
-        // $lokasi = Lokasi::first();
         return view('admin.lokasi');
-        // ,['lokasi' => $lokasi]); Pastikan path view yang benar
     }
 
     public function postlokasi(Request $request)
