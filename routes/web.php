@@ -25,7 +25,11 @@ Route::get('/users/struktur', function () {
 });
 
 Route::get('/galeri', function () {
-    return view('users.galeri');
+    return view('users.foto');
+});
+
+Route::get('/video', function () {
+    return view('users.video');
 });
 
 // ADMIN

@@ -35,8 +35,8 @@
                                 Galeri 
                             </button>
                             <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
-                                <li><a class="dropdown-item fw-bold text-primary" href="#">Video</a></li>
+                                <li><a class="dropdown-item fw-bold text-primary" href="/galeri">Foto</a></li>
+                                <li><a class="dropdown-item fw-bold text-primary" href="/video">Video</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ms-5">
@@ -228,8 +228,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-custom text-white py-4">
-        <div class=" text-white position-absolute  start-0 w-100 py-2 ">
+    <footer class="bg-primary-custom text-white pt-4">
+        <div class=" text-white start-0 w-100 py-2 ">
             <div class="container custom-padding">
                 <div class="row ">
                     <div class="col-md-6">

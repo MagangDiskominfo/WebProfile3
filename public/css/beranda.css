@@ -65,7 +65,10 @@ body {
     padding-top: 62px; /* Contoh padding di dalam konten */
 }
 
-
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
 
 /* Section Berita */
 /* .news-section {
@@ -107,4 +110,47 @@ body {
     border-color: #002D85 ; /* Atur warna garis tepi, bisa disesuaikan sesuai keinginan */
     width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
     display: inline-block; /* Agar lebar kartu sesuai dengan konten */
+    /* margin-top: 20px; */
+    /* z-index: 5; */
+    /* margin: 20px; */
+}
+
+.visimisi-card {
+    border-width: 3px; /* Atur lebar garis tepi */
+    /* border-color: #002D85 ; Atur warna garis tepi, bisa disesuaikan sesuai keinginan */
+    width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
+    display: inline-block; /* Agar lebar kartu sesuai dengan konten */
+    /* margin-top: 20px; */
+    border: none;
+    border-radius: 15px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+    /* z-index: 5; */
+    /* margin: 20px; */
+}
+
+.struktur-card {
+    border-width: 3px; /* Atur lebar garis tepi */
+    width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
+    display: inline-block; /* Agar lebar kartu sesuai dengan konten */
+    border: none;
+    border-radius: 15px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-custom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content:end;
+    right: 20px;
+}
+
+.carousel-control-prev-custom, .carousel-control-next-custom {
+    color: #002D85;
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+    margin-right:  15px;
 }
