@@ -11,12 +11,43 @@ class PostBerita extends Controller
 {
     public function berita()
     {
-        return view('admin.berita');    
+        return view('admin.berita', ['beritas'=> Berita::all(),]);
+        
     }
 
     public function postberita(Request $request)
     {
 
+        $validateData = $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+            'image_berita' => 'required|image|mimes:png,jpg,jpeg|max:2024',
+        ]);
+
+        $validateData["user_id"] = auth()->user()->id;
+        $validateData['slug'] = Str::slug($validateData['title']);
+        $validateData["excerpt"] = Str::limit($validateData['body'], 300);
+
+        $image_name = time() . '_' . $request->file('image_berita')->getClientOriginalName();
+        $request->file('image_berita')->storeAs('public/berita', $image_name);
+
+        $validateData['image_berita'] = $image_name;
+
+        $result = Berita::create($validateData);
+
+        if ($result) {
+            return redirect('/')->with('success', 'Berhasil menambahkan data');
+        } else {
+            return redirect('/dashboard')->with("error", "Gagal menambahkan data!");
+        }
+    }
+
+    public function edit($id){
+        $berita = Berita::find($id);
+        return view('admin.edit.editberita', ['berita' => $berita]);
+    }
+
+    public function update(Request $request, $id){
         $validateData = $request->validate([
             'title' => 'required',
             'body' => 'required',
@@ -31,12 +62,22 @@ class PostBerita extends Controller
 
         $validateData['image_berita'] = $image_name;
 
-        $result = Berita::create($validateData);
+        $result = Berita::where('id', $id)
+        ->update($validateData);
 
         if ($result) {
             return redirect('/')->with('success', 'Berhasil menambahkan data');
         } else {
             return redirect('/dashboard')->with("error", "Gagal menambahkan data!");
+        }
+    }
+
+    public function delete($id){
+        $result = Berita::where('id', $id)->delete();
+        if($result){
+            return redirect('/berita');
+        }else{
+            return redirect('/berita');
         }
     }
 }
