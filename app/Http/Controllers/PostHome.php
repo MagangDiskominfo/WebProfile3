@@ -38,7 +38,7 @@ class PostHome extends Controller
             $validateData['background_image'] = $image_name;
         }
 
-        $result = Home::create($validateData);
+        $result = Home::where('id', 23)->update($validateData);
 
         if ($result) {
             return redirect('/')->with('success', 'Data berhasil disimpan');

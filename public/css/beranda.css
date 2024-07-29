@@ -40,7 +40,7 @@ body {
 
 .position-relative {
     position: relative; 
-    /* background-size: cover; */
+    background-size: cover;
     background-position: center center; 
     height: 713px; /* Sesuaikan tinggi sesuai kebutuhan */
 }
@@ -153,4 +153,76 @@ body {
     border: none;
     outline: none;
     margin-right:  15px;
+}
+
+.kegiatan-image {
+    width: 100%; /* Pastikan gambar memenuhi lebar kontainer */
+    height: 400px; /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover; /* Memastikan gambar menyesuaikan ruang tanpa mengubah rasio */
+}
+
+/* Atur ukuran kartu kegiatan jika diperlukan */
+.news-card {
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.news-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%; /* Pastikan gambar memenuhi lebar kontainer */
+    height: 400px; /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover; /* Memastikan gambar menyesuaikan ruang tanpa mengubah rasio */
+}
+
+.news-card-body {
+    padding: 20px;
+}
+
+/* Atur kontainer deskripsi */
+.description-container {
+    max-width: 50%; /* Setengah dari lebar halaman */
+    margin-left: 0; /* Atur margin kiri */
+    padding: 0px; /* Tambahkan padding jika diperlukan */
+    color: white; /* Atur warna teks */
+    text-align: left; /* Atur perataan teks jika diperlukan */
+}
+
+/* Style umum untuk teks putih */
+.text-white {
+    color: white;
+}
+
+/* Style khusus untuk posisi relatif */
+.position-relative {
+    position: relative; 
+    background-size: cover;
+    background-position: center center; 
+    height: 713px; /* Sesuaikan tinggi sesuai kebutuhan */
+}
+
+/* Overlay gradient */
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/gradian.svg');
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.7; /* Sesuaikan tingkat transparansi gradien */
+}
+
+/* Style untuk padding kustom */
+.custom-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Gaya untuk header */
+.header-content {
+    padding-top: 110px;
 }

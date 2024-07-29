@@ -45,7 +45,7 @@
                             <a class="nav-link" href="/foto">Foto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Vidio</a>
+                            <a class="nav-link" href="/vidio">Vidio</a>
                         </li>
                     </ul>
                 </div>

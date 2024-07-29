@@ -16,33 +16,34 @@
                 <label for="description">Deskripsi Berita</label>
                 <textarea class="formroens-control" id="body" name="body" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" style="width: 10%;">Submit</button>
         </form>
         <h2>Daftar Berita</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Judul</th>
-                <th>Gambar</th>
-                <th>Deskripsi</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($beritas as $berita)
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>{{ $berita->id }}</td>
-                    <td>{{ $berita->title }}</td>
-                    <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}" width="100"></td>
-                    <td>{{ $berita->body }}</td>
-                    <td>
-                        <!-- Tambahkan tombol edit dan delete -->
-                        <a href="/berita/edit/{{ $berita->id }}" class="btn btn-warning">Edit</a>                         
-                        <a href="/berita/delete/{{ $berita->id }}" class="btn btn-danger">Delete</a>
-                    </td>
+                    {{-- <th>ID</th> --}}
+                    <th>Judul</th>
+                    <th>Gambar</th>
+                    <th>Deskripsi</th>
+                    <th>Aksi</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($beritas as $berita)
+                    <tr>
+                        {{-- <td>{{ $berita->id }}</td> --}}
+                        <td>{{ $berita->title }}</td>
+                        <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}" width="100">
+                        </td>
+                        <td>{{ $berita->body }}</td>
+                        <td>
+                            <!-- Tambahkan tombol edit dan delete -->
+                            <a href="/berita/edit/{{ $berita->id }}" class="btn btn-warning">Edit</a>
+                            <a href="/berita/delete/{{ $berita->id }}" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     @endsection

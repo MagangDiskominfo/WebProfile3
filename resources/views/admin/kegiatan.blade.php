@@ -1,21 +1,52 @@
 @extends('/admin/dashboard')
+
 @section('content')
-<form action="/kegiatan" method="POST" enctype="multipart/form-data">
-    <h2>Atur Kegiatan Website</h2>
-    <p>Silahkan isi dengan benar untuk membuat kegiatan website mu!</p>
-    @csrf
-    <div class="form-group">
-        <label for="judul">Judul Kegiatan</label>
-        <input type="text" id="judul" name="judul_kegiatan" placeholder="Masukkan Judul Kegiatan">
-    </div>
-    <div class="form-group">
-        <label for="deskripsi">Deskripsi Kegiatan</label>
-        <textarea id="deskripsi" name="deskripsi_kegiatan" placeholder="Masukkan Deskripsi Kegiatan"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="iamge">Gambar Kegiatan</label>
-        <input type="file" class="form-control-file" id="image" name="gambar_kegiatan" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-</form>
+    <form action="/kegiatan" method="POST" enctype="multipart/form-data">
+        <h2>Atur Kegiatan Website</h2>
+        <p>Silahkan isi dengan benar untuk membuat kegiatan website mu!</p>
+        @csrf
+        <div class="form-group">
+            <label for="judul">Judul Kegiatan</label>
+            <input type="text" id="judul" name="judul_kegiatan" placeholder="Masukkan Judul Kegiatan">
+        </div>
+        <div class="form-group">
+            <label for="deskripsi">Deskripsi Kegiatan</label>
+            <textarea id="deskripsi" name="deskripsi_kegiatan" placeholder="Masukkan Deskripsi Kegiatan"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image">Gambar Kegiatan</label>
+            <input type="file" class="form-control-file" id="image" name="gambar_kegiatan" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+    </form>
+
+    <!-- Tabel CRUD untuk menampilkan data kegiatan -->
+    <h2>Daftar Berita</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Judul</th>
+                <th>Deskripsi</th>
+                <th>Gambar</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($kegiatans as $kegiatan)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $kegiatan->judul_kegiatan }}</td>
+                    <td>{{ $kegiatan->deskripsi_kegiatan }}</td>
+                    <td><img src='storage/kegiatan/{{ $kegiatan->gambar_kegiatan }}' alt="{{ $kegiatan->judul_kegiatan }}"
+                            width="100"></td>
+                    <td>
+                        <!-- Tambahkan tombol edit dan delete -->
+                        <a href="/kegiatan/edit/{{ $kegiatan->id }}" class="btn btn-warning">Edit</a>
+                        <a href="/kegiatan/delete/{{ $kegiatan->id }}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection

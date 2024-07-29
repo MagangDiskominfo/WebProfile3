@@ -118,3 +118,11 @@ button:hover {
 .footer .text-muted {
     color: #6c757d;
 }
+
+.description-short {
+    display: block;
+}
+
+.description-full {
+    display: none;
+}

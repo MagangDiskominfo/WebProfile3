@@ -22,13 +22,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="{{ url('/') }}">Beranda</a>
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/">Beranda</a>
                         </li>
                         <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/visimisi">Visi Misi</a>
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/users/visimisi">Visi Misi</a>
                         </li>
                         <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/struktur">Struktur Organisasi</a>
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/users/struktur">Struktur Organisasi</a>
                         </li>
                         <li class="nav-item ms-5 dropdown">
                             <button class="nav-link btn dropdown-toggle text-white fs-6 font-family-Poppins" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,7 +36,7 @@
                             </button>
                             <ul class="dropdown-menu ">
                                 <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
-                                <li><a class="dropdown-item fw-bold text-primary" href="#">Video</a></li>
+                                <li><a class="dropdown-item fw-bold text-primary" href="/vidio-detail">Video</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ms-5">
@@ -71,20 +71,6 @@
             </div>
         </section>
 
-        {{-- <section id="visimisi" class=" content bg-primary-custom ">
-            <div class="container mt-5">
-                <h2 class="text-center text-dark fw-bold mb-4">Visi</h2>
-                <p class="text-center text-dark fs-5 mb-5">“Terselenggaranya jaringan komunikasi dan Informatika yang terintegrasi untuk mendukung terwujudnya Pemerintahan yang baik.”</p>
-                <h2 class="text-center text-dark fw-bold mb-4">Misi</h2>
-                <p class="text-center text-dark fs-6 fw-semibold mb-5">
-                    Mewujudkan Jaringan Komunikasi dan Informatika yang terintegrasi<br>
-                    Mewujudkan Sarana Komunikasi dan Diseminasi Informasi yang Efektif<br>
-                    Melaksanakan Pengelolaan Data dan Produksi Secara Elektronik<br>
-                    Melaksanakan Urusan Rumah Tangga untuk Mendukung Peningkatan Kapasitas Organisasi dan Pengembangan Sumber Daya Manusia.
-                </p>
-            </div>
-        </section> --}}
-        
     </main>
     <!-- Footer -->
     <footer class="text-white py-4">
@@ -124,3 +110,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

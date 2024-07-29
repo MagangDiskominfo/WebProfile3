@@ -25,10 +25,10 @@
                             <a class="nav-link text-white fs-6 font-family-Poppins" href="{{ url('/') }}">Beranda</a>
                         </li>
                         <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/visimisi">Visi Misi</a>
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/users/visimisi">Visi Misi</a>
                         </li>
                         <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/struktur">Struktur Organisasi</a>
+                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/users/struktur">Struktur Organisasi</a>
                         </li>
                         <li class="nav-item ms-5 dropdown">
                             <button class="nav-link btn dropdown-toggle text-white fs-6 font-family-Poppins" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,7 +36,7 @@
                             </button>
                             <ul class="dropdown-menu ">
                                 <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
-                                <li><a class="dropdown-item fw-bold text-primary" href="#">Video</a></li>
+                                <li><a class="dropdown-item fw-bold text-primary" href="/vidio-detail">Video</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ms-5">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-md-6 text-end">
                         <ul class="list-unstyled ">
-                            <li class="mt-4 mb-2"><a class="text-white" href="{{ url('/') }}">Home</a></li>
+                            <li class="mt-4 mb-2"><a class="text-white" href="/">Home</a></li>
                             <li class="mb-2"><a class="text-white" href="/visimisi">Visi Misi</a></li>
                             <li class="mb-2"><a class="text-white" href="/struktur">Struktur Organisasi</a></li>
                             <li class="mb-2"><a class="text-white" href="/galeri">Galeri</a></li>

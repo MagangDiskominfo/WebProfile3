@@ -1,8 +1,6 @@
 @extends('/admin/dashboard')
 @section('content')
     <form action="/berita/update/{{ $berita->id }}" method="POST" enctype="multipart/form-data">
-        <h2>Atur Berita Website</h2>
-        <p>Silahkan isi dengan benar untuk membuat Berita Website mu!</p>
         @csrf
         <div class="form-group">
             <label for="title">Judul Berita</label>
@@ -16,6 +14,6 @@
             <label for="description">Deskripsi Berita</label>
             <textarea class="formroens-control" id="body" name="body" rows="5" required>{{ $berita->body }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" style="width: 10%;">Submit</button>
     </form>
 @endsection

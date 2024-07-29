@@ -1,61 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Halaman Beranda</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
 </head>
+
 <body style="background-color: #002D85">
     <!-- Navigasi di bagian atas -->
-    <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
-        <div class="container custom-padding">
-            <a class=" navbar-brand " href="#">
-                <img src="/storage/home/{{$home[0]->logo}}" alt="Logo" style="height: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="{{ url('/') }}">Beranda</a>
-                        </li>
-                        <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/visimisi">Visi Misi</a>
-                        </li>
-                        <li class="nav-item ms-5">
-                            <a class="nav-link text-white fs-6 font-family-Poppins" href="/struktur">Struktur Organisasi</a>
-                        </li>
-                        <li class="nav-item ms-5 dropdown">
-                            <button class="nav-link btn dropdown-toggle text-white fs-6 font-family-Poppins" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Galeri 
-                            </button>
-                            <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item fw-bold text-primary" href="/galeri">Foto</a></li>
-                                <li><a class="dropdown-item fw-bold text-primary" href="/video">Video</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item ms-5">
-                            <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="/login">Masuk</a>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-    </nav>
+    @include('users/layouts/navbar')
     <header class="content">
-        <div class="position-relative" style="background-image: url('/storage/home/{{$home[0]->background_image}}')">
+        <div class="position-relative" style="background-image: url('/storage/home/{{ $home[0]->background_image }}')">
             <div class="overlay-gradient"></div>
-                <div class="position-relative text-justify " style="padding-top: 110px;">
-                    <div class="container custom-padding">
-                    <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi}}</b></h1>
-                    <h4 class="text-white mt-4 ">{{ $home[0]->deskripsi }}</h4>
+            <div class="position-relative text-justify " style="padding-top: 110px;">
+                <div class="container custom-padding">
+                    <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi }}</b></h1>
+                    <div class="description-container">
+                        <h5 class="text-white mt-4 ">{{ $home[0]->deskripsi }}</h5>
+                    </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </header>
 
     <main>
@@ -77,22 +48,23 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 @foreach ($berita as $item)
-                                <div class="col-md-6">
-                                    <div class="card news-card ">
-                                        <div class="">
-                                        <img src="/storage/berita/{{$item->image_berita}}" class="card-img-top" alt="Berita 1">
-                                    </div>
-                                    <div class="">
-                                        <div class="card-body news-card-body">
-                                            <h5 class="card-title">{{$item->title }}</h5>
-                                            <p class="card-text">{{ $item->excerpt }}</p>
-                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                    <div class="col-md-6">
+                                        <div class="card news-card ">
+                                            <div class="">
+                                                <img src="/storage/berita/{{ $item->image_berita }}"
+                                                    class="card-img-top" alt="Berita 1">
+                                            </div>
+                                            <div class="">
+                                                <div class="card-body news-card-body">
+                                                    <h5 class="card-title">{{ $item->title }}</h5>
+                                                    <p class="card-text">{{ $item->excerpt }}</p>
+                                                    <a href="/users/detail-berita/{{ $item->id }}" class="btn news-card-button">Baca Selengkapnya</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    </div>
-                                </div>
                                 @endforeach
-                               
+
                             </div>
                         </div>
                         {{-- <div class="carousel-item">
@@ -126,18 +98,20 @@
                         </div> --}}
                         <!-- Repeat for more carousel items -->
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </div>
         </section>
-        
+
         <!-- Section Kegiatan -->
         <section id="kegiatan" class="news-section bg-primary-custom pb-4 ">
             <div class="container">
@@ -147,32 +121,34 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 @foreach ($kegiatan as $item)
-                                    
-                                
-                                <div class="col-md-6">
-                                    <div class="card news-card ">
-                                        <div class="">
-                                        <img src="storage/kegiatan/{{ $item->gambar_kegiatan }}" class="card-img-top" alt="Berita 1">
-                                    </div>
-                                    <div class="">
-                                        <div class="card-body news-card-body">
-                                            <h5 class="card-title">{{$item->judul_kegiatan }}</h5>
-                                            <p class="card-text">{{ $item->deskripsi_kegiatan }}</p>
-                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
+                                    <div class="col-md-6">
+                                        <div class="card news-card ">
+                                            <div class="">
+                                                <img src="storage/kegiatan/{{ $item->gambar_kegiatan }}"
+                                                    class="card-img-top kegiatan-image" alt="Berita 1">
+                                            </div>
+                                            <div class="">
+                                                <div class="card-body news-card-body">
+                                                    <h5 class="card-title">{{ $item->judul_kegiatan }}</h5>
+                                                    <p class="card-text">{{ $item->excerpt }}</p>
+                                                    <a href="/users/detail-kegiatan/{{ $item->id }}" class="btn news-card-button">Baca
+                                                        Selengkapnya</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    </div>
-                                </div>
                                 @endforeach
                             </div>
                         </div>
                         <!-- Repeat for more carousel items -->
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -195,14 +171,16 @@
                 <div class="col text-center">
                     <div class="card maps-card mx-4 ">
                         <div class="card-body">
-                            <iframe src="{{ $lokasi[0]->lokasi_link }}" width="1100" height="500" style="border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="{{ $lokasi[0]->lokasi_link }}" width="1100" height="500"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        
+
     </main>
 
     <!-- Footer -->
@@ -217,7 +195,8 @@
                         <div class="pt-2">
                             <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i> Kota Jambi, Jambi </p>
                             <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i> 0741444953</p>
-                            <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i> diskominfokotajambi@gmail.com</p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i>
+                                diskominfokotajambi@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-end">
@@ -229,7 +208,7 @@
                         </ul>
                     </div>
                 </div>
-                </div>
+            </div>
             <div class="container text-center">
                 {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
                 <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
@@ -238,11 +217,11 @@
         </div>
     </footer>
 
-    
+
 
     <!-- Bootstrap JS Bundle (Popper.js included) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 
+</html>

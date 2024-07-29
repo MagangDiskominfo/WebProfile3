@@ -15,6 +15,11 @@ class PostBerita extends Controller
         
     }
 
+    public function detail($id){
+        $berita = Berita::find($id);
+        return view('users.detail_berita', ['berita' => $berita]);
+    }
+
     public function postberita(Request $request)
     {
 
