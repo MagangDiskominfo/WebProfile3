@@ -1,62 +1,45 @@
 @extends('/admin/dashboard')
-@section('content')
-<div class="container">
-    <!-- Form untuk tambah/edit foto -->
-    <h2>{{ isset($foto) ? 'Edit Foto' : 'Tambah Foto' }}</h2>
-    <form action="{{ isset($foto) ? route('admin.foto.update', $foto->id) : route('admin.foto.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        @if (isset($foto))
-            @method('PUT')
-        @endif
 
+@section('content')
+    <form action="/foto" method="POST" enctype="multipart/form-data">
+        <h2>Atur Foto Instansi</h2>
+        @csrf
         <div class="form-group">
-            <label for="upload_foto">Gambar</label>
-            <input type="file" class="form-control-file" id="upload_foto" name="upload_foto">
-            @if (isset($foto))
-                <small>Biarkan kosong jika tidak ingin mengganti foto</small>
-                <div class="mt-2">
-                    <img src="{{ asset('storage/' . $foto->upload_foto) }}" alt="Foto" width="150">
-                </div>
-            @endif
+            <label for="image">Galeri Foto</label>
+            <input type="file" class="form-control-file" id="image" name="foto" required>
         </div>
         <div class="form-group">
             <label for="deskripsi">Deskripsi</label>
-            <input type="text" id="deskripsi" name="deskripsi" value="{{ isset($foto) ? $foto->deskripsi : old('deskripsi') }}" class="form-control">
+            <textarea id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">{{ isset($foto) ? 'Simpan Perubahan' : 'Tambah Foto' }}</button>
+        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
     </form>
 
-    <!-- Menampilkan daftar foto -->
-    <h3 class="mt-4">Daftar Foto</h3>
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">{{ $message }}</div>
-    @endif
-    @isset($fotos)
-        <table class="table table-bordered mt-3">
-            <thead>
+    <!-- Tabel CRUD untuk menampilkan data kegiatan -->
+    <h2>Daftar Foto</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Deskripsi</th>
+                <th>Gambar</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($fotos as $foto)
                 <tr>
-                    <th>Foto</th>
-                    <th>Deskripsi</th>
-                    <th>Aksi</th>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $foto->deskripsi }}</td>
+                    <td><img src='storage/kegiatan/{{ $foto->foto }}' alt="{{ $foto->deskripsi }}"
+                            width="100"></td>
+                    <td>
+                        <!-- Tambahkan tombol edit dan delete -->
+                        <a href="/foto/edit/{{ $foto->id }}" class="btn btn-warning">Edit</a>
+                        <a href="/foto/delete/{{ $foto->id }}" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach ($fotos as $foto)
-                    <tr>
-                        <td><img src="{{ asset('storage/' . $foto->upload_foto) }}" alt="Foto" width="100"></td>
-                        <td>{{ $foto->deskripsi }}</td>
-                        <td>
-                            <a href="{{ route('admin.foto.edit', $foto->id) }}" class="btn btn-warning">Edit</a>
-                            <form action="{{ route('admin.foto.destroy', $foto->id) }}" method="POST" style="display:inline;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Hapus</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    @endisset
-</div>
+            @endforeach
+        </tbody>
+    </table>
 @endsection

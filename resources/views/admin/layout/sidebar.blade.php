@@ -15,7 +15,7 @@
                 <div id="informasiSubMenu" class="collapse">
                     <ul class="nav flex-column ml-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="/home">Home</a>
+                            <a class="nav-link" href="/home">Beranda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/berita">Berita</a>
@@ -31,6 +31,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/struktur">Struktur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/visimisi">Footer</a>
+                        </li>
                     </ul>
                 </div>
             </li>

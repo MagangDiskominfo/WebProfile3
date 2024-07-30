@@ -19,7 +19,7 @@ use App\Http\Middleware\PreventBackHistory;
 Route::get('/', [ShowBeranda::class, 'showberanda']);
 Route::get('/users/visimisi', function () {return view('users.visimisi');});
 Route::get('/users/struktur', function () {return view('users.struktur');});
-Route::get('/foto', function () {return view('users.foto');});
+Route::get('/users/foto', function () {return view('users.foto');});
 Route::get('/dashboard', function () {return view('admin.dashboard');});
 
 Route::get('/users/detail-berita/{id}', [PostBerita::class, 'detail']);
@@ -48,7 +48,14 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::get('/kegiatan/delete/{id}', [PostKegiatan::class, 'delete']);
 
     Route::get('/vidio', [PostVidio::class, 'index']);      
-    Route::post('/vidio', [PostVidio::class, 'postvidio']); 
+    Route::post('/vidio', [PostVidio::class, 'postvidio']);
+
+    Route::get('/foto', [PostFoto::class, 'foto']);
+    Route::post('/foto', [PostFoto::class, 'postfoto']);
+    Route::get('/foto/edit/{id}', [PostFoto::class, 'edit']);
+    Route::post('/foto/update/{id}', [PostFoto::class, 'update']);
+    Route::get('/foto/delete/{id}', [PostFoto::class, 'delete']); 
+
 
     Route::post('/visimisi', [PostVisimisi::class, 'postvisimisi']);
     Route::get('/visimisi', [PostVisimisi::class, 'visimisi']);
