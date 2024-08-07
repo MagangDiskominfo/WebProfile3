@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
+    <style>
+       
+        .carousel-item img {
+            height: 150px;
+             width: auto;
+            max-height: 100%; /* Adjust to fit within the fixed height */
+            object-fit: cover; /* Ensures the image covers the area */
+        }
+    </style>
 </head>
 
 <body style="background-color: #002D85">
@@ -47,55 +56,91 @@
         </div>
     </nav>
     
-    <main style="background-color:white">
+    <main style="background-color:white; flex: 1;   min-height: 150vh;">
         <section id="galeri" class="text-center" style="padding-top: 5rem">
-                <div class="position-relative">
-                    <div class="container custom-padding">
-                        <div class="card struktur-card mt-5">
-                            <div class="card-body mb-5">
-                                <h1 class="fw-bold fs-1 mb-4">Galeri</h1>
-                                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
-                                                    </div>
-                                                </div>
+            <div class="position-relative">
+                <div class="container custom-padding">
+                    <div class="card struktur-card mt-5">
+                        <div class="card-body mb-5">
+                            <h1 class="fw-bold fs-1 mb-4">Galeri</h1>
+                            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
                                             </div>
-                                            <div class="carousel-item">
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
-                                                    </div>
-                                                </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-control-custom">
-                                        <button class="carousel-control-prev-custom" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                            <span aria-hidden="true">Sebelumnya</span>
-                                        </button>
-                                        <button class="carousel-control-next-custom" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                            <span aria-hidden="true">Selanjutnya</span>
-                                        </button>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                                <img src="https://via.placeholder.com/359x462" class="d-block w-100 rounded-3" alt="...">
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="carousel-control-custom">
+                                <button class="carousel-control-prev-custom" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <span aria-hidden="true">Sebelumnya</span>
+                                </button>
+                                <button class="carousel-control-next-custom" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <span aria-hidden="true">Selanjutnya</span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
     
@@ -123,7 +168,7 @@
                         </ul>
                     </div>
                 </div>
-                </div>
+            </div>
             <div class="container text-center">
                 {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
                 <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
