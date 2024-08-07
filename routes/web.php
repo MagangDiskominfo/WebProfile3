@@ -66,8 +66,5 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::get('/lokasi', [PostLokasi::class, 'lokasi'])->name('lokasi.form'); // Formulir untuk input atau update
     Route::put('/lokasi', [PostLokasi::class, 'postlokasi'])->name('lokasi.update'); // Proses input atau update
 
-    Route::post('/struktur', [PostStruktur::class, 'poststruktur']);
-    Route::get('/struktur', [PostStruktur::class, 'struktur']);
-
     Route::get('/logout', [login::class, 'logout']);
 });
