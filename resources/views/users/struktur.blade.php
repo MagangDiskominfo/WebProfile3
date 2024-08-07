@@ -57,7 +57,7 @@
                                 {{-- <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p> --}}
                                 <h2 class="text-center text-primary fw-bold m-4">Struktur Organisasi</h2>
                                 <div>
-                                    <img src="../img/struktur1.png" alt="Struktur" class="">
+                                    <img src="/storage/struktur/{{ $strukturn->struktur_gambar }}" alt="Struktur" class="">
                                 </div>
                             </div>
                         </div>

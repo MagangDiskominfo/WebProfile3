@@ -17,8 +17,8 @@ use App\Http\Middleware\PreventBackHistory;
 
 // USERS
 Route::get('/', [ShowBeranda::class, 'showberanda']);
-Route::get('/users/visimisi', function () {return view('users.visimisi');});
-Route::get('/users/struktur', function () {return view('users.struktur');});
+Route::get('/users/visimisi', [PostVisimisi::class, 'index']);
+Route::get('/users/struktur', [PostStruktur::class, 'index']);
 Route::get('/users/foto', function () {return view('users.foto');});
 Route::get('/dashboard', function () {return view('admin.dashboard');});
 
@@ -56,9 +56,11 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::post('/foto/update/{id}', [PostFoto::class, 'update']);
     Route::get('/foto/delete/{id}', [PostFoto::class, 'delete']); 
 
-
     Route::post('/visimisi', [PostVisimisi::class, 'postvisimisi']);
     Route::get('/visimisi', [PostVisimisi::class, 'visimisi']);
+
+    Route::post('/struktur', [PostStruktur::class, 'poststruktur']);
+    Route::get('/struktur', [PostStruktur::class, 'struktur']);
 
     Route::post('/lokasi', [PostLokasi::class, 'postlokasi']);
     Route::get('/lokasi', [PostLokasi::class, 'lokasi'])->name('lokasi.form'); // Formulir untuk input atau update

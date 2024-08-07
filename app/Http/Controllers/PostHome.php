@@ -20,7 +20,7 @@ class PostHome extends Controller
         $validateData = $request->validate([
             'logo' => 'nullable|image|mimes:png,jpg,jpeg|max:2024',
             'nama_instansi' => 'required|string|max:255',
-            'deskripsi' => 'required|string|max:255',
+            'deskripsi' => 'required|string|max:350',
             'background_image' => 'nullable|image|mimes:png,jpg,jpeg|max:2024',
         ]);
 

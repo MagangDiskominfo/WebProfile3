@@ -3,34 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\struktur;
+use App\Models\Visimisi;
 use Illuminate\Http\Request;
 
-class PostStruktur extends Controller
+class PostVisimisi extends Controller
 {
-    public function struktur() {
-        return view('/admin.struktur');
+    public function visimisi() {
+        return view('admin.visimisi');
     }
 
-    public function poststruktur(Request $request) {
+    public function index() {
+        $visimisin = Visimisi::first(); // Sesuaikan query dengan kebutuhan Anda
+        return view('users.visimisi', ['visimisin' => $visimisin]);
+    }
 
+    public function postvisimisi(Request $request) {
         $validateData = $request->validate([
-            'struktur_gambar' => 'image|mimes:png,jpg,jpeg|max:2024',
+            'visi' => 'required',
+            'misi' => 'required',
         ]);
 
-        if ($request->hasFile('struktur_gambar')) {
-            $image_name = time() . '_' . $request->file('struktur_gambar')->getClientOriginalName();
-            $request->file('struktur_gambar')->storeAs('public/struktur', $image_name);
-            $validateData['struktur_gambar'] = $image_name;
+        $result = Visimisi::where('id', 1)->update($validateData);
 
-
-            $result = Struktur::create($validateData);
-
-            if ($result) {
-                return redirect('/');
-            } else {
-                return redirect('/dashboard');
-            }
+        if ($result) {
+            return redirect('/');
+        } else {
+            return redirect('/dashboard');
         }
     }
 }

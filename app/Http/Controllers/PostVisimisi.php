@@ -8,22 +8,27 @@ use Illuminate\Http\Request;
 
 class PostVisimisi extends Controller
 {
-    public function visimisi () {
+    public function visimisi() {
         return view('admin.visimisi');
     }
 
-    public function postvisimisi (Request $request) {
+    public function index() {
+        $visimisin = Visimisi::first(); // Sesuaikan query dengan kebutuhan Anda
+        return view('users.visimisi', ['visimisin' => $visimisin]);
+    }
+
+    public function postvisimisi(Request $request) {
         $validateData = $request->validate([
             'visi' => 'required',
             'misi' => 'required',
         ]);
 
-        $visiMisi = new Visimisi();
-        $visiMisi->visi = $validateData['visi'];
-        $visiMisi->misi = $validateData['misi'];
-        $visiMisi->save();
+        $result = Visimisi::where('id', 1)->update($validateData);
 
-        // Redirect atau kembalikan respons sesuai kebutuhan aplikasi Anda
-        return redirect('/');
+        if ($result) {
+            return redirect('/');
+        } else {
+            return redirect('/dashboard');
+        }
     }
-}   
+}
