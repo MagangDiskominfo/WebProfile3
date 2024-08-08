@@ -42,7 +42,7 @@
         }
 
         .left h1 {
-            font-size: 24px;
+            font-size: 50px;
             line-height: 1.4;
         }
 
@@ -125,10 +125,7 @@
 <body>
     <div class="container">
         <div class="left">
-            <div class="logo">
-                <img src="../img/login.png" alt="Logo">
-            </div>
-            <h1>Dinas Komunikasi dan Informatika<br>Kota Jambi</h1>
+            <h1> Login <br> Administrator</h1>
         </div>
         <div class="right">
             <a href="#" class="back-link">Kembali</a>
