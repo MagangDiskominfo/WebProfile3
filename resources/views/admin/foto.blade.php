@@ -31,7 +31,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $foto->deskripsi }}</td>
-                    <td><img src='storage/kegiatan/{{ $foto->foto }}' alt="{{ $foto->deskripsi }}"
+                    <td><img src='storage/foto/{{ $foto->foto }}' alt="{{ $foto->deskripsi }}"
                             width="100"></td>
                     <td>
                         <!-- Tambahkan tombol edit dan delete -->

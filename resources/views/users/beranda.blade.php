@@ -189,14 +189,11 @@
             <div class="container custom-padding">
                 <div class="row ">
                     <div class="col-md-6">
-                        <a class=" navbar-brand " href="#">
-                            <img src="{{ asset('../img/diskom.png') }}" alt="Logo" style="height: 35px;">
-                        </a>
                         <div class="pt-2">
-                            <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i> Kota Jambi, Jambi </p>
-                            <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i> 0741444953</p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>     {{ $footer[0]->wilayah }}</p>
+                            <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i>    {{ $footer[0]->nomor_instansi }}</p>  
                             <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i>
-                                diskominfokotajambi@gmail.com</p>
+                                {{ $footer [0]->email_instansi }}</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-end">

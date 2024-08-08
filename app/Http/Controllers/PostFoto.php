@@ -10,8 +10,13 @@ use Illuminate\Support\Str;
 
 class PostFoto extends Controller
 {
+
+    public function index () {
+        return view('users.foto', ['foto' => Foto::paginate(9),]);
+    }
+
     public function foto() {
-        return view('admin.foto', ['fotos' => Foto::all(),]);
+        return view('admin.foto', ['fotos' => Foto::all()]);
     }
 
     public function postfoto(Request $request) {

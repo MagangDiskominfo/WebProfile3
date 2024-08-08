@@ -5,6 +5,8 @@ use App\Http\Controllers\PostBerita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostHome;
 use App\Http\Controllers\fungsi;
+use App\Http\Controllers\Halaman;
+use App\Http\Controllers\PostFooter;
 use App\Http\Controllers\PostFoto;
 use App\Http\Controllers\PostGaleri;
 use App\Http\Controllers\PostKegiatan;
@@ -19,8 +21,10 @@ use App\Http\Middleware\PreventBackHistory;
 Route::get('/', [ShowBeranda::class, 'showberanda']);
 Route::get('/users/visimisi', [PostVisimisi::class, 'index']);
 Route::get('/users/struktur', [PostStruktur::class, 'index']);
-Route::get('/users/foto', function () {return view('users.foto');});
-Route::get('/dashboard', function () {return view('admin.dashboard');});
+
+Route::get('/users/foto', [PostFoto::class, 'index']);
+// Route::get('/dashboard', function () {return view('admin.dashboard');});
+Route::get('/dashboard', [Halaman::class, 'halaman']);
 
 Route::get('/users/detail-berita/{id}', [PostBerita::class, 'detail']);
 Route::get('/users/detail-kegiatan/{id}', [PostKegiatan::class, 'detail']);
@@ -65,6 +69,9 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::post('/lokasi', [PostLokasi::class, 'postlokasi']);
     Route::get('/lokasi', [PostLokasi::class, 'lokasi'])->name('lokasi.form'); // Formulir untuk input atau update
     Route::put('/lokasi', [PostLokasi::class, 'postlokasi'])->name('lokasi.update'); // Proses input atau update
+
+    Route::get('/footer', [PostFooter::class, 'footer']);
+    Route::post('/footer', [PostFooter::class, 'postfooter']);
 
     Route::get('/logout', [login::class, 'logout']);
 });

@@ -33,7 +33,7 @@
                             <a class="nav-link" href="/struktur">Struktur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/visimisi">Footer</a>
+                            <a class="nav-link" href="/footer">Footer</a>
                         </li>
                     </ul>
                 </div>

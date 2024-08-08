@@ -25,7 +25,7 @@
                         Galeri
                     </button>
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item fw-bold text-primary" href="/foto">Foto</a></li>
+                        <li><a class="dropdown-item fw-bold text-primary" href="/users/foto">Foto</a></li>
                         <li><a class="dropdown-item fw-bold text-primary" href="/vidio-detail">Video</a></li>
                     </ul>
                 </li>

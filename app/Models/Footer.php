@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Foto extends Model
+class Footer extends Model
 {
     use HasFactory;
-    protected $table = 'foto';
+    protected $table = 'footer';
     protected $fillable = [
-        'foto',
-        'deskripsi',
-        'excerpt',
+        'wilayah',
+        'nomor_instansi',
+        'email_instansi',
     ];
 }

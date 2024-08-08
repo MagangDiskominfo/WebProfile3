@@ -18,7 +18,7 @@
             </div>
             <button type="submit" class="btn btn-primary" style="width: 10%;">Submit</button>
         </form>
-        <h2>Daftar Berita</h2>
+        <br><h2>Daftar Berita</h2></br>
         <table class="table">
             <thead>
                 <tr>
