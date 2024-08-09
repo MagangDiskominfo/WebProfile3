@@ -18,8 +18,14 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 @include('admin/layout/navbar')
                 @yield('content')
+                <footer>
+                    <div class="container text-center">
+                        {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
+                        <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
+                        <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
+                    </div>
+                </footer>
             </main>
-
         </div>
 
 
