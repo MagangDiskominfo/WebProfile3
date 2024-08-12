@@ -183,7 +183,7 @@ body {
 
 /* Atur kontainer deskripsi */
 .description-container {
-    max-width: 50%; /* Setengah dari lebar halaman */
+    max-width: 70%; /* Setengah dari lebar halaman */
     margin-left: 0; /* Atur margin kiri */
     padding: 0px; /* Tambahkan padding jika diperlukan */
     color: white; /* Atur warna teks */

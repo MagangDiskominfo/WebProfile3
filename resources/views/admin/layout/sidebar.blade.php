@@ -1,14 +1,19 @@
-<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+<nav class="col-md-2 d-none d-md-block bg-white sidebar">
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link active" href="/dashboard">
-                    <span data-feather></span>
-                    <strong>Dashboard</strong>
+            <li class="nav-item jarak">
+                <a class="nav-link " href="/dashboard">
+                    <img src="/img/diskom.png" alt="Logo" class="dashboard-logo">
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#informasiSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="informasiSubMenu">
+            <li class="nav-item jarak">
+                <a class="nav-link text-primary" href="/dashboard">
+                    <span data-feather="home"></span>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item jarak">
+                <a class="nav-link collapsed text-primary" href="#informasiSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="informasiSubMenu">
                     <span data-feather="layers"></span>
                     Kelola Informasi
                 </a>
@@ -38,8 +43,8 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#berandaSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="berandaSubMenu">
+            <li class="nav-item jarak">
+                <a class="nav-link collapsed text-primary" href="#berandaSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="berandaSubMenu">
                     <span data-feather="aperture"></span>
                     Kelola Galeri
                 </a>
@@ -54,8 +59,8 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/logout">
+            <li class="nav-item jarak">
+                <a class="nav-link text-primary" href="/logout">
                     <span data-feather="log-out"></span>
                     Logout
                 </a>
