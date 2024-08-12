@@ -20,9 +20,19 @@
             {{-- <div class="overlay-gradient"></div> --}}
             <div class="position-relative text-justify " style="padding-top: 110px;">
                 <div class="container custom-padding">
-                    <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi }}</b></h1>
-                    <div class="description-container">
-                        <h5 class="text-white mt-4 ">{{ $home[0]->deskripsi }}</h5>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi }}</b></h1>
+                            <div class="description-container">
+                                <h5 class="text-white mt-4 ">{{ $home[0]->deskripsi }}</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="mt-4">
+                                <img src="/img/joko.jpg" alt="Presiden" class="img-fluid mb-3" style="max-width: 150px; margin-right: 2rem">
+                                <img src="/img/wowo.png" alt="Wakil Presiden" class="img-fluid" style="max-width: 150px;">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
