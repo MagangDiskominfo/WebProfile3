@@ -55,6 +55,19 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#backSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="backSubMenu">
+                    <span data-feather="pen-tool"></span>
+                    Website Color
+                </a>
+                <div id="backSubMenu" class="collapse">
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Background Color</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/logout">
                     <span data-feather="log-out"></span>
                     Logout

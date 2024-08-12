@@ -17,7 +17,7 @@
     @include('users/layouts/navbar')
     <header class="content">
         <div class="position-relative" style="background-image: url('/storage/home/{{ $home[0]->background_image }}')">
-            <div class="overlay-gradient"></div>
+            {{-- <div class="overlay-gradient"></div> --}}
             <div class="position-relative text-justify " style="padding-top: 110px;">
                 <div class="container custom-padding">
                     <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi }}</b></h1>
