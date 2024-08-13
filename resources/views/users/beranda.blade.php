@@ -178,12 +178,26 @@
         <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
                 <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p>
-                <div class="col text-center">
-                    <div class="card maps-card mx-4 ">
-                        <div class="card-body">
-                            <iframe src="{{ $lokasi[0]->lokasi_link }}" width="1100" height="500"
+                <div class="row">
+                    <div class="col-md-8 text-center">
+                        <div class="card maps-card mx-4 ">
+                            <div class="card-body">
+                                <iframe src="{{ $lokasi[0]->lokasi_link }}" width="700" height="500"
                                 style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-start" style="margin-top: 12rem ">
+                        <div class="card maps-card mx-4 ">
+                            <div class="card-body">
+                                <div class="pt-2">
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>     {{ $footer[0]->wilayah }}</p>
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i>    {{ $footer[0]->nomor_instansi }}</p>  
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i>
+                                        {{ $footer [0]->email_instansi }}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -194,9 +208,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-custom text-white pt-4">
+    <footer class="bg-primary-custom text-white pt-3">
         <div class=" text-white start-0 w-100 py-2 ">
-            <div class="container custom-padding">
+            {{-- <div class="container custom-padding">
                 <div class="row ">
                     <div class="col-md-6">
                         <div class="pt-2">
@@ -215,10 +229,10 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="container text-center">
                 {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
-                <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
+                {{-- <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;"> --}}
                 <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
             </div>
         </div>

@@ -9,7 +9,7 @@ class Home extends Model
 {
     use HasFactory;
     
-    protected $table = 'home';
+    public $table = 'home';
     public $home = 'home';
     protected $fillable = [
         'logo',
