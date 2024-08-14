@@ -158,3 +158,34 @@ button:hover {
 .icon-dashboard {
     color: #002D85; /* Warna untuk ikon Dashboard */
 }
+
+
+/* CSS for fixed sidebar and navbar */
+/* bisa fixed masih bermasalah  */
+
+/* .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it stays on top of other content 
+} */
+
+/* .sidebar {
+    position: fixed;
+    top: 56px; /* Height of the navbar 
+    left: 0;
+    height: calc(100% - 56px); /* Adjust height to account for navbar 
+    overflow-y: auto;
+    z-index: 1029; /* Keep below the navbar 
+}
+
+.container-fluid {
+    margin-top: 56px; /* Push content below the navbar 
+}
+
+.container {
+    margin-left: 250px; /* Adjust based on the sidebar width 
+    padding-top: 20px;
+}
+ */

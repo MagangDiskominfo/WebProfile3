@@ -46,7 +46,7 @@
         </div>
     </nav>
 
-    <main style="background-color: white; flex: 1;  min-height: 150vh;">
+    <main style="background-color: white; flex: 1;  min-height: 170vh;">
         <section id="visimisi" class="content">
             <div class="position-relative">
                 <div class="container custom-padding">

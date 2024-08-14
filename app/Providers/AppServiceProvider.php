@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\Home;
 use Illuminate\Support\ServiceProvider;
+use App\Models\Home;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,7 +20,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // $home = Home::first();
-        // view()->share('home', $home);
+        // Ambil logo dari database
+        $home = Home::first(); // Atau sesuai dengan ID tertentu
+        
+        // Share logo ke semua view
+        view()->share('home', $home);
     }
 }
