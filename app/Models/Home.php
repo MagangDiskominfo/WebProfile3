@@ -15,6 +15,10 @@ class Home extends Model
         'logo',
         'nama_instansi',
         'deskripsi',
-        'background_image',        
+        'background_image',
+        'gambar_ketua',
+        'nama_ketua',
+        'gambar_wakil',
+        'nama_wakil',        
     ];
 }

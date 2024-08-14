@@ -21,7 +21,7 @@
             <div class="position-relative text-justify " style="padding-top: 110px;">
                 <div class="container custom-padding">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-6">
                             <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi }}</b></h1>
                             <div class="description-container">
                                 <h5 class="text-white mt-4 ">{{ $home[0]->deskripsi }}</h5>
@@ -29,8 +29,10 @@
                         </div>
                         <div class="col-md-4 text-center">
                             <div class="mt-4">
-                                <img src="/img/joko.jpg" alt="Presiden" class="img-fluid mb-3" style="max-width: 150px; margin-right: 2rem">
-                                <img src="/img/wowo.png" alt="Wakil Presiden" class="img-fluid" style="max-width: 150px;">
+                                <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-3" style="max-width: 150px; margin-right: 1rem">
+                                <p>{{ $home[0]->nama_ketua }}</p>
+                                <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-3" style="max-width: 150px;">
+                                <p>{{  $home[0]->nama_wakil }}</p>
                             </div>
                         </div>
                     </div>

@@ -22,6 +22,10 @@ class PostHome extends Controller
             'nama_instansi' => 'required|string|max:1000',
             'deskripsi' => 'required|string|max:1000',
             'background_image' => 'nullable|image|mimes:png,jpg,jpeg|max:2024',
+            'gambar_ketua' => 'nullable|image|mimes:png,jpg,jpeg|max:2024',
+            'nama_ketua' => 'required|string|max:1000',
+            'gambar_wakil' => 'nullable|image|mimes:png,jpg,jpeg|max:2024',
+            'nama_wakil' => 'required|string|max:1000', 
         ]);
 
         // Proses penyimpanan logo jika ada
@@ -38,12 +42,24 @@ class PostHome extends Controller
             $validateData['background_image'] = $image_name;
         }
 
-        $result = Home::where('id', 23)->update($validateData);
+        if ($request->hasFile('gambar_ketua')) {
+            $image_name = time() . '_' . $request->file('gambar_ketua')->getClientOriginalName();
+            $request->file('gambar_ketua')->storeAs('public/home', $image_name);
+            $validateData['gambar_ketua'] = $image_name;
+        }
+
+        if ($request->hasFile('gambar_wakil')) {
+            $image_name = time() . '_' . $request->file('gambar_wakil')->getClientOriginalName();
+            $request->file('gambar_wakil')->storeAs('public/home', $image_name);
+            $validateData['gambar_wakil'] = $image_name;
+        }
+
+        $result = Home::where('id', 1)->update($validateData);
 
         if ($result) {
-            return redirect('/')->with('success', 'Data berhasil disimpan');
+            return redirect('/home');
         } else {
-            return redirect('/dashboard')->with('error', 'Gagal menyimpan data!');
+            return redirect('/dashboard');
         }
     }
 }

@@ -24,7 +24,6 @@ Route::get('/users/struktur', [PostStruktur::class, 'index']);
 
 Route::get('/users/foto', [PostFoto::class, 'index']);
 // Route::get('/dashboard', function () {return view('admin.dashboard');});
-Route::get('/dashboard', [Halaman::class, 'halaman']);
 
 Route::get('/users/detail-berita/{id}', [PostBerita::class, 'detail']);
 Route::get('/users/detail-kegiatan/{id}', [PostKegiatan::class, 'detail']);
@@ -73,5 +72,6 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::get('/footer', [PostFooter::class, 'footer']);
     Route::post('/footer', [PostFooter::class, 'postfooter']);
 
+    Route::get('/dashboard', [Halaman::class, 'halaman']);
     Route::get('/logout', [login::class, 'logout']);
 });

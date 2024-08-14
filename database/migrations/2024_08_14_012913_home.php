@@ -16,7 +16,11 @@ return new class extends Migration
             $table->string('logo')->nullable();
             $table->string('nama_instansi');
             $table->string('deskripsi');
-            $table->text('background_image')->nullable();
+            $table->string('background_image')->nullable();
+            $table->string('gambar_ketua');
+            $table->text('nama_ketua');
+            $table->string('gambar_wakil');
+            $table->text('nama_wakil');
             $table->timestamps();
 
         });

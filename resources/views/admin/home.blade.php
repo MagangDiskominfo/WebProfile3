@@ -23,6 +23,22 @@
                     <label for="background_image">Background Website</label>
                     <input type="file" class="form-control" id="background_image" name="background_image">
                 </div>
+                <div class="form-group">
+                    <label for="gambar_ketua">Gambar Ketua Instansi</label>
+                    <input type="file" class="form-control" id="gambar_ketua" name="gambar_ketua">
+                </div>
+                <div class="form-group">
+                    <label for="nama_ketua">Nama Ketua Instansi</label>
+                    <input type="text" class="form-control" id="nama_ketua" name="nama_ketua"  placeholder="Masukkan Nama Ketua Instansi" required>
+                </div>
+                <div class="form-group">
+                    <label for="gambar_wakil">Gambar Wakil Ketua Instansi</label>
+                    <input type="file" class="form-control" id="gambar_wakil" name="gambar_wakil">
+                </div>
+                <div class="form-group">
+                    <label for="nama_wakil">Nama Wakil Instansi</label>
+                    <input type="text" class="form-control" id="nama_wakil" name="nama_wakil"  placeholder="Masukkan Nama Wakil Instansi" required>
+                </div>
                 <button type="submit" class="btn font-weight-bold text-white" style="background-color: #002D85; border-color: #002D85;">Simpan Perubahan</button>
             </form>
         </div>

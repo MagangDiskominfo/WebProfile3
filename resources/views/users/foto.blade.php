@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
         <div class="container custom-padding">
             <a class=" navbar-brand " href="#">
-                <img src="{{ asset('../img/diskom.png') }}" alt="Logo" style="height: 40px;">
+                <img src="/storage/home/{{ $home->logo }}" alt="Logo" style="height: 40px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

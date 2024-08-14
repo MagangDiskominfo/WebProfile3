@@ -36,7 +36,7 @@ class PostFoto extends Controller
         $result = Foto::create($validateData);
 
         if ($result) {
-            return redirect('/');
+            return redirect('/foto');
         } else {
             return redirect('/dashboard');
         }
@@ -74,9 +74,9 @@ class PostFoto extends Controller
     public function delete($id){
         $result = Foto::where('id', $id)->delete();
         if($result){
-            return redirect('/kegiatan');
+            return redirect('/foto');
         } else {
-            return redirect('/kegiatan');
+            return redirect('/foto');
         }
     }
 }
