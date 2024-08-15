@@ -29,10 +29,12 @@
                         </div>
                         <div class="col-md-4 text-center">
                             <div class="mt-4">
-                                <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-3" style="max-width: 150px; margin-right: 1rem">
+                                <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-3"
+                                    style="max-width: 150px; margin-right: 1rem">
                                 <p>{{ $home[0]->nama_ketua }}</p>
-                                <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-3" style="max-width: 150px;">
-                                <p>{{  $home[0]->nama_wakil }}</p>
+                                <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-3"
+                                    style="max-width: 150px;">
+                                <p>{{ $home[0]->nama_wakil }}</p>
                             </div>
                         </div>
                     </div>
@@ -54,119 +56,83 @@
         <!-- Section Berita -->
         <section id="berita" class="news-section bg-white pb-4">
             <div class="container">
-                <p class="text-center text-primary fs-1 fw-bold font-family-Poppins  m-0 px-3 py-4">Berita</p>
-                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <p class="text-center text-primary fs-1 fw-bold font-family-Poppins m-0 px-3 py-4">Berita</p>
+                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                @foreach ($berita as $item)
-                                    <div class="col-md-6">
-                                        <div class="card news-card ">
-                                            <div class="">
+                        @foreach ($berita->chunk(3) as $chunk) <!-- Mengelompokkan 3 berita per slide -->
+                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                <div class="row">
+                                    @foreach ($chunk as $item)
+                                        <div class="col-md-4">
+                                            <div class="card news-card">
                                                 <img src="/storage/berita/{{ $item->image_berita }}"
-                                                    class="card-img-top" alt="Berita 1">
-                                            </div>
-                                            <div class="">
+                                                    class="card-img-top" alt="{{ $item->title }}">
                                                 <div class="card-body news-card-body">
                                                     <h5 class="card-title">{{ $item->title }}</h5>
                                                     <p class="card-text">{{ $item->excerpt }}</p>
-                                                    <a href="/users/detail-berita/{{ $item->id }}" class="btn news-card-button">Baca Selengkapnya</a>
+                                                    <a href="/users/detail-berita/{{ $item->id }}"
+                                                        class="btn news-card-button">Baca Selengkapnya</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @endforeach
-
-                            </div>
-                        </div>
-                        {{-- <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card news-card ">
-                                        <div class="">
-                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 1">
-                                    </div>
-                                    <div class="">
-                                        <div class="card-body news-card-body">
-                                            <h5 class="card-title">(1)Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
-                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                    </div>
+                                    @endforeach
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="card news-card ">
-                                        <img src="../img/berita1.webp" class="card-img-top" alt="Berita 2">
-                                        <div class="card-body news-card-body">
-                                            <h5 class="card-title">(2)Sekda A Ridwan Buka Festival Muharram 2024 Kota Jambi</h5>
-                                            <p class="card-text">Festival ini merupakan acara tahunan yang telah berjalan selama beberapa tahun terakhir, dan kali ini juga diselenggarakan dengan meriah. Acara pembukaan dihadiri oleh berbagai tokoh penting...</p>
-                                            <a href="#" class="btn news-card-button">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                             </div>
-                        </div> --}}
-                        <!-- Repeat for more carousel items -->
+                        @endforeach
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel"
-                        data-bs-slide="prev">
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </div>
         </section>
+        
 
         <!-- Section Kegiatan -->
-        <section id="kegiatan" class="news-section bg-primary-custom pb-4 ">
+        <section id="kegiatan" class="news-section bg-primary-custom pb-4">
             <div class="container">
-                <p class="text-center text-white fs-1 fw-bold font-family-Poppins  m-0 px-3 py-4">Kegiatan</p>
-                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <p class="text-center text-white fs-1 fw-bold font-family-Poppins m-0 px-3 py-4">Kegiatan</p>
+                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                @foreach ($kegiatan as $item)
-                                    <div class="col-md-6">
-                                        <div class="card news-card ">
-                                            <div class="">
-                                                <img src="storage/kegiatan/{{ $item->gambar_kegiatan }}"
-                                                    class="card-img-top kegiatan-image" alt="Berita 1">
-                                            </div>
-                                            <div class="">
+                        @foreach ($kegiatan->chunk(3) as $chunk) <!-- Mengelompokkan 3 item per slide -->
+                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                <div class="row">
+                                    @foreach ($chunk as $item)
+                                        <div class="col-md-4">
+                                            <div class="card news-card">
+                                                <img src="storage/kegiatan/{{ $item->gambar_kegiatan }}" class="card-img-top kegiatan-image" alt="{{ $item->judul_kegiatan }}">
                                                 <div class="card-body news-card-body">
                                                     <h5 class="card-title">{{ $item->judul_kegiatan }}</h5>
                                                     <p class="card-text">{{ $item->excerpt }}</p>
-                                                    <a href="/users/detail-kegiatan/{{ $item->id }}" class="btn news-card-button">Baca
-                                                        Selengkapnya</a>
+                                                    <a href="/users/detail-kegiatan/{{ $item->id }}" class="btn news-card-button">Baca Selengkapnya</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @endforeach
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
-                        <!-- Repeat for more carousel items -->
+                        @endforeach
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel"
-                        data-bs-slide="prev">
+        
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </div>
         </section>
+        
 
 
         {{-- <section id="kegiatan" class="py-5">
@@ -185,8 +151,8 @@
                         <div class="card maps-card mx-4 ">
                             <div class="card-body">
                                 <iframe src="{{ $lokasi[0]->lokasi_link }}" width="700" height="500"
-                                style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -194,10 +160,12 @@
                         <div class="card maps-card mx-4 ">
                             <div class="card-body">
                                 <div class="pt-2">
-                                    <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>     {{ $footer[0]->wilayah }}</p>
-                                    <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i>    {{ $footer[0]->nomor_instansi }}</p>  
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>
+                                        {{ $footer[0]->wilayah }}</p>
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i>
+                                        {{ $footer[0]->nomor_instansi }}</p>
                                     <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i>
-                                        {{ $footer [0]->email_instansi }}</p>
+                                        {{ $footer[0]->email_instansi }}</p>
                                 </div>
                             </div>
                         </div>

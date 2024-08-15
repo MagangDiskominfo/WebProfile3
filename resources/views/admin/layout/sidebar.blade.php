@@ -45,7 +45,7 @@
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link collapsed text-primary" href="#berandaSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="berandaSubMenu">
-                    <span data-feather="aperture"></span>
+                    <span data-feather="image"></span>
                     Kelola Galeri
                 </a>
                 <div id="berandaSubMenu" class="collapse">
@@ -55,6 +55,19 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/vidio">Vidio</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item jarak">
+                <a class="nav-link collapsed text-primary" href="#webSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="webSubMenu">
+                    <span data-feather="cloud-rain"></span>
+                    Warna Website
+                </a>
+                <div id="webSubMenu" class="collapse">
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Warna Web</a>
                         </li>
                     </ul>
                 </div>

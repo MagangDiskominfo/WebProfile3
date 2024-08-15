@@ -226,3 +226,22 @@ body {
 .header-content {
     padding-top: 110px;
 }
+
+.kegiatan-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-card {
+    margin-bottom: 20px;
+}
+
+.carousel-inner {
+    padding: 0 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 50%;
+}

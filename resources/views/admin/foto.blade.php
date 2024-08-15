@@ -25,6 +25,7 @@
                         <th>Deskripsi</th>
                         <th>Gambar</th>
                         <th>Aksi</th>
+                        <th>Active</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,8 +33,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $foto->deskripsi }}</td>
-                            <td><img src='storage/foto/{{ $foto->foto }}' alt="{{ $foto->deskripsi }}"
-                                    width="100"></td>
+                            <td><img src='storage/foto/{{ $foto->foto }}' alt="{{ $foto->deskripsi }}" width="100"></td>
                             <td>
                                 <!-- Tambahkan tombol edit dan delete -->
                                 <a href="/foto/edit/{{ $foto->id }}" class="btn btn-warning">Edit</a>

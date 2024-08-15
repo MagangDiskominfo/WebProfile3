@@ -32,6 +32,7 @@
                         <th>Deskripsi</th>
                         <th>Gambar</th>
                         <th>Aksi</th>
+                        <th>Active</th>
                     </tr>
                 </thead>
                 <tbody>

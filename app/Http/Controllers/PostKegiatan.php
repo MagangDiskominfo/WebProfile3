@@ -9,16 +9,19 @@ use Illuminate\Support\Str;
 
 class PostKegiatan extends Controller
 {
-    public function kegiatan () {
-        return view('admin.kegiatan', ['kegiatans'=> Kegiatan::all(),]);
+    public function kegiatan()
+    {
+        return view('admin.kegiatan', ['kegiatans' => Kegiatan::all(),]);
     }
 
-    public function detail($id){
+    public function detail($id)
+    {
         $kegiatan = Kegiatan::find($id);
         return view('users.detail_kegiatan', ['kegiatan' => $kegiatan]);
     }
 
-    public function postkegiatan(Request $request) {
+    public function postkegiatan(Request $request)
+    {
         // Validasi data yang diterima dari form
         $validateData = $request->validate([
             'judul_kegiatan' => 'required',
@@ -46,12 +49,14 @@ class PostKegiatan extends Controller
         }
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $kegiatan = Kegiatan::find($id);
-        return view('admin.edit.editkegiatan', ['kegiatan' =>$kegiatan]);
+        return view('admin.edit.editkegiatan', ['kegiatan' => $kegiatan]);
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $validateData = $request->validate([
             'judul_kegiatan' => 'required',
             'deskripsi_kegiatan' => 'required',
@@ -67,7 +72,7 @@ class PostKegiatan extends Controller
 
         // Menyimpan data ke dalam tabel kegiatan
         $result = Kegiatan::where('id', $id)
-        ->update($validateData);
+            ->update($validateData);
 
         // Mengembalikan respons berdasarkan hasil penyimpanan
         if ($result) {
@@ -77,9 +82,10 @@ class PostKegiatan extends Controller
         }
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $result = Kegiatan::where('id', $id)->delete();
-        if($result){
+        if ($result) {
             return redirect('/kegiatan');
         } else {
             return redirect('/kegiatan');

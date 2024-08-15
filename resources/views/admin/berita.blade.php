@@ -26,20 +26,23 @@
                     <thead>
                         <tr>
                             {{-- <th>ID</th> --}}
+                            <th>No</th>
                             <th>Judul</th>
-                            <th>Gambar</th>
                             <th>Deskripsi</th>
+                            <th>Gambar</th>
                             <th>Aksi</th>
+                            <th>Active</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($beritas as $berita)
                             <tr>
                                 {{-- <td>{{ $berita->id }}</td> --}}
+                                <td>{{ $loop->iteration }}</td>
                                 <td>{{ $berita->title }}</td>
+                                <td>{{ $berita->body }}</td>
                                 <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}" width="100">
                                 </td>
-                                <td>{{ $berita->body }}</td>
                                 <td>
                                     <!-- Tambahkan tombol edit dan delete -->
                                     <a href="/berita/edit/{{ $berita->id }}" class="btn btn-warning">Edit</a>

@@ -49,6 +49,7 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::get('/kegiatan/edit/{id}', [PostKegiatan::class, 'edit']);
     Route::post('/kegiatan/update/{id}', [PostKegiatan::class, 'update']);
     Route::get('/kegiatan/delete/{id}', [PostKegiatan::class, 'delete']);
+    Route::get('/kegiatan/changeStatus', [PostKegiatan::class, 'changeStatus']);
 
     Route::get('/vidio', [PostVidio::class, 'index']);      
     Route::post('/vidio', [PostVidio::class, 'postvidio']);

@@ -125,7 +125,10 @@
 <body>
     <div class="container">
         <div class="left">
-            <h1> Login <br> Administrator</h1>
+            <div class="logo">
+                <img src="../img/login.png" alt="">
+            </div>
+            <h3 class="text-white font-family-Poppins"><b>{{ $home->nama_instansi }}</b></h3>
         </div>
         <div class="right">
             <a href="#" class="back-link">Kembali</a>
