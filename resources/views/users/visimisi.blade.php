@@ -34,7 +34,7 @@
                             Galeri 
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
+                            <li><a class="dropdown-item fw-bold text-primary" href="/users/foto">Foto</a></li>
                             <li><a class="dropdown-item fw-bold text-primary" href="/vidio-detail">Video</a></li>
                         </ul>
                     </li>
@@ -68,9 +68,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-white py-4">
+    <footer class="text-white py-3">
         <div class="text-white position-absolute start-0 w-100 py-2">
-            <div class="container custom-padding">
+            {{-- <div class="container custom-padding">
                 <div class="row">
                     <div class="col-md-6">
                         <a class="navbar-brand" href="#">
@@ -91,9 +91,9 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="container text-center">
-                <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
+                {{-- <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;"> --}}
                 <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
             </div>
         </div>

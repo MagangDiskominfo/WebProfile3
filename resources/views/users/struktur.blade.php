@@ -35,7 +35,7 @@
                                 Galeri 
                             </button>
                             <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item fw-bold text-primary" href="#">Foto</a></li>
+                                <li><a class="dropdown-item fw-bold text-primary" href="/users/foto">Foto</a></li>
                                 <li><a class="dropdown-item fw-bold text-primary" href="/vidio-detail">Video</a></li>
                             </ul>
                         </li>
@@ -67,9 +67,9 @@
         </section>
     </main>
 
-    <footer class="text-white pt-4">
+    <footer class="text-white pt-3">
         <div class=" text-white start-0 w-100 py-2 ">
-            <div class="container custom-padding">
+            {{-- <div class="container custom-padding">
                 <div class="row ">
                     <div class="col-md-6">
                         <a class=" navbar-brand " href="#">
@@ -90,11 +90,11 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="container text-center">
                 {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
-                <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
-                <p>Copyright &copy; Diskominfo Kota Jambi 2024. All rights reserved.</p>
+                {{-- <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;"> --}}
+                <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
             </div>
         </div>
     </footer>
