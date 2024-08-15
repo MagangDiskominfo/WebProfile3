@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Halaman Beranda</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
 </head>
 
@@ -21,20 +20,18 @@
             <div class="position-relative text-justify " style="padding-top: 110px;">
                 <div class="container custom-padding">
                     <div class="row">
-                        <div class="col-md-6">
-                            <h1 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi }}</b></h1>
+                        <div class="col-md-7">
                             <div class="description-container">
+                            <h2 class="text-white font-family-Poppins"><b>{{ $home[0]->nama_instansi }}</b></h2>
                                 <h5 class="text-white mt-4 ">{{ $home[0]->deskripsi }}</h5>
                             </div>
                         </div>
-                        <div class="col-md-4 text-center">
-                            <div class="mt-4">
-                                <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-3"
-                                    style="max-width: 150px; margin-right: 1rem">
+                        <div class="col-md-5 text-center">
+                            <div class="mt-0 text-center">
+                                <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-3" style="max-width: 200px; margin-right:2rem;">
+                                <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-3" style="max-width: 200px;">
                                 <p>{{ $home[0]->nama_ketua }}</p>
-                                <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-3"
-                                    style="max-width: 150px;">
-                                <p>{{ $home[0]->nama_wakil }}</p>
+                                <p>{{  $home[0]->nama_wakil }}</p>
                             </div>
                         </div>
                     </div>
