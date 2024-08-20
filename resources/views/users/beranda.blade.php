@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
 </head>
 
-<body style="background-color: #002D85">
+{{-- <body style="background-color: #002D85"> --}}
+<body>
     <!-- Navigasi di bagian atas -->
     @include('users/layouts/navbar')
     <header class="content">
@@ -30,8 +31,14 @@
                             <div class="mt-0 text-center">
                                 <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-3" style="max-width: 200px; margin-right:2rem;">
                                 <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-3" style="max-width: 200px;">
-                                <p>{{ $home[0]->nama_ketua }}</p>
-                                <p>{{  $home[0]->nama_wakil }}</p>
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <p>{{ $home[0]->nama_ketua }}</p>
+                                    </div>
+                                    <div class="col-md-5 text-center">
+                                        <p>{{  $home[0]->nama_wakil }}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -205,6 +212,14 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let savedColor = localStorage.getItem('backgroundColor');
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;
+            }
+        });
+    </script>
 
 
     <!-- Bootstrap JS Bundle (Popper.js included) -->

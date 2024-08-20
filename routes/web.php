@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CaptchaController;
 use App\Http\Controllers\login;
 use App\Http\Controllers\PostBerita;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,8 @@ Route::get('/users/detail-berita/{id}', [PostBerita::class, 'detail']);
 Route::get('/users/detail-kegiatan/{id}', [PostKegiatan::class, 'detail']);
 Route::get('/vidio-detail', [PostVidio::class, 'vidio']);
 Route::get('/users/video', function () {return view('users.video');});
+
+Route::get('/admin/warna', function () {return view('admin.warna');});
 
 Route::post('/login', [login::class, 'login']);
 Route::get('/login', [login::class, 'index'])->name('login');
@@ -76,4 +79,8 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
 
     Route::get('/dashboard', [Halaman::class, 'halaman']);
     Route::get('/logout', [login::class, 'logout']);
+
+    // Route::get('/login', [CaptchaController::class, 'getForm']);
+    // // Route::get('/login', [login::class, 'logout']);  
+
 });
