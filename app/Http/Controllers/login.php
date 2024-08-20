@@ -14,11 +14,15 @@ class login extends Controller
     
     public function login(Request $request){
 
-        $validateData = $request->validate([
+        $request->validate([
             'email' => 'required|email:dns',
             'password' => 'required|min:8|max:32',
+            'captcha' => 'required|captcha',
         ]);
-            if (Auth::attempt($validateData)) {
+
+        $credentials = $request->only('email', 'password');
+
+            if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
                 return redirect()->intended('/dashboard')->with("success", "Login Berhasil");
             } else {

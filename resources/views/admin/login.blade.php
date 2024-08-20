@@ -144,6 +144,16 @@
                     <label for="password">Kata Sandi</label>
                     <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi">
                 </div>
+                <div class="input-group">
+                    <label for="captcha">Captcha</label>
+                        <div>
+                            {!! Captcha::img()!!}
+                        </div>
+                    <input type="text" id="captcha" name="captcha" required>
+                    @error('captcha')
+                    <div>{{ $message }}</div>                        
+                    @enderror
+                </div>
                 <button type="submit">Masuk</button>
                 <a href="#" class="forgot-password">Lupa Kata Sandi?</a>
             </form>
