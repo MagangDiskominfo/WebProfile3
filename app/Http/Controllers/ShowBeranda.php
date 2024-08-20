@@ -13,6 +13,6 @@ use App\Models\Lokasi;
 class ShowBeranda extends Controller
 {
     public function showberanda() {
-       return view ('users.beranda', ['footer'=> Footer::all(), 'home'=> Home::all(),'berita'=> Berita::all(), 'kegiatan'=> Kegiatan::all(), 'lokasi'=> Lokasi::all()]);
+       return view ('users.beranda', ['footer'=> Footer::all(), 'home'=> Home::all(),'berita'=> Berita::where('active', 1)->get(), 'kegiatan'=> Kegiatan::all(), 'lokasi'=> Lokasi::all()]);
     }
 }

@@ -72,7 +72,7 @@ class PostKegiatan extends Controller
 
         // Menyimpan data ke dalam tabel kegiatan
         $result = Kegiatan::where('id', $id)
-            ->update($validateData);
+            ->update($validateData);  
 
         // Mengembalikan respons berdasarkan hasil penyimpanan
         if ($result) {

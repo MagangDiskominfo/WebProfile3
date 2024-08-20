@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Deskripsi Berita</label>
-                        <textarea class="formroens-control" id="body" name="body" rows="5" required></textarea>
+                        <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 10%;">Submit</button>
                 </form>
@@ -31,7 +31,7 @@
                             <th>Deskripsi</th>
                             <th>Gambar</th>
                             <th>Aksi</th>
-                            <th>Active</th>
+                            <th>Non-Active</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,12 +41,16 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $berita->title }}</td>
                                 <td>{{ $berita->body }}</td>
-                                <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}" width="100">
-                                </td>
+                                <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}" width="100"></td>
                                 <td>
-                                    <!-- Tambahkan tombol edit dan delete -->
                                     <a href="/berita/edit/{{ $berita->id }}" class="btn btn-warning">Edit</a>
                                     <a href="/berita/delete/{{ $berita->id }}" class="btn btn-danger">Delete</a>
+                                </td>
+                                <td>
+                                    <label class="switch">
+                                        <input type="checkbox" data-id="{{ $berita->id }}" {{ $berita->active ? 'checked' : '' }}>
+                                        <span class="slider round"></span>
+                                    </label>
                                 </td>
                             </tr>
                         @endforeach
@@ -55,4 +59,29 @@
             </div>
         </div>
     </div>
+
+    <!-- Script untuk menangani perubahan status toggle switch -->
+    <script>
+        document.querySelectorAll('.switch input').forEach(function(toggleSwitch) {
+            toggleSwitch.addEventListener('change', function() {
+                let beritaId = this.getAttribute('data-id');
+                let activeStatus = this.checked ? 0 : 1;
+
+                fetch(`/berita/toggle/${beritaId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({ active: activeStatus })
+                }).then(response => {
+                    if (response.ok) {
+                        console.log('Status berhasil diperbarui');
+                    } else {
+                        console.error('Gagal memperbarui status');
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

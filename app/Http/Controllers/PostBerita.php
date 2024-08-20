@@ -32,6 +32,7 @@ class PostBerita extends Controller
         $validateData["user_id"] = auth()->user()->id;
         $validateData['slug'] = Str::slug($validateData['title']);
         $validateData["excerpt"] = Str::limit($validateData['body'], 300);
+        $validateData["active"] = 1;
 
         $image_name = time() . '_' . $request->file('image_berita')->getClientOriginalName();
         $request->file('image_berita')->storeAs('public/berita', $image_name);
@@ -84,5 +85,18 @@ class PostBerita extends Controller
         }else{
             return redirect('/berita');
         }
+    }
+
+    public function active(Request $request, $id) {
+        $berita = Berita::find($id);
+
+        // Perbarui status active berdasarkan data dari toggle switch
+        $berita->active = $request->input('active');
+    
+        // Simpan perubahan ke database
+        $berita->save();
+    
+        // Kembalikan respons JSON
+        return response()->json(['success' => 'Status berhasil diperbarui.']);
     }
 }

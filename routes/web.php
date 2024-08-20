@@ -42,6 +42,7 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::get('/berita', [PostBerita::class, 'berita']);
     Route::get('/berita/edit/{id}', [PostBerita::class, 'edit']);
     Route::post('/berita/update/{id}', [PostBerita::class, 'update']);
+    Route::post('/berita/toggle/{id}', [PostBerita::class, 'active']);
     Route::get('/berita/delete/{id}', [PostBerita::class, 'delete']);
 
     Route::post('/kegiatan', [PostKegiatan::class, 'postkegiatan']);
