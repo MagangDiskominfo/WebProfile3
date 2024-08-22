@@ -19,7 +19,7 @@
                     <label for="email">Email Instansi</label>
                     <input type="email" class="form-control" id="email" name="email_instansi" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 </div>        
-                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                <button type="submit">Simpan Perubahan</button>
             </form>
         </div>
     </div>

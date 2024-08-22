@@ -10,7 +10,7 @@
                     <label for="vidio">Link vidio (URL)</label>
                     <input type="text" class="form-control" id="vidio" name="vidio" placeholder="Masukkan link lokasi (mis. https://www.youtube.com)">
                 </div>
-                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                <button type="submit">Simpan Perubahan</button>
             </form>
         </div>
     </div>

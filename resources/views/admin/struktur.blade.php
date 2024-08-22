@@ -11,7 +11,7 @@
                     <label for="struktur">Upload Struktur Organisasi</label>
                     <input type="file" class="form-control-file" id="struktur" name="struktur_gambar" required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 10%;">Submit</button>
+                <button type="submit"  style="width: 10%;">Submit</button>
             </form>
         </div>
     </div>

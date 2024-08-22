@@ -15,7 +15,7 @@
                     <label for="Misi">Misi</label>
                     <textarea id="Misi" name="misi" placeholder="Masukkan Misi"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                <button type="submit">Simpan Perubahan</button>
             </form>
         </div>
     </div>

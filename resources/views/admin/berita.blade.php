@@ -19,7 +19,7 @@
                         <label for="description">Deskripsi Berita</label>
                         <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 10%;">Submit</button>
+                    <button type="submit" style="width: 10%;">Submit</button>
                 </form>
                 <br><h2 class="font-weight-bold">Daftar Berita</h2>
                 <table class="table">
