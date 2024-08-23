@@ -31,7 +31,7 @@ Route::get('/users/detail-kegiatan/{id}', [PostKegiatan::class, 'detail']);
 Route::get('/vidio-detail', [PostVidio::class, 'vidio']);
 Route::get('/users/video', function () {return view('users.video');});
 
-Route::get('/admin/warna', function () {return view('admin.warna');});
+// Route::get('/admin/warna', function () {return view('admin.warna');});
 
 Route::post('/login', [login::class, 'login']);
 Route::get('/login', [login::class, 'index'])->name('login');
@@ -57,6 +57,7 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
 
     Route::get('/vidio', [PostVidio::class, 'index']);      
     Route::post('/vidio', [PostVidio::class, 'postvidio']);
+    Route::get('/warna', [PostVidio::class, 'warna']);
 
     Route::get('/foto', [PostFoto::class, 'foto']);
     Route::post('/foto', [PostFoto::class, 'postfoto']);

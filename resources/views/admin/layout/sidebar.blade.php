@@ -67,7 +67,7 @@
                 <div id="webSubMenu" class="collapse">
                     <ul class="nav flex-column ml-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Warna Web</a>
+                            <a class="nav-link" href="/warna">Warna Web</a>
                         </li>
                     </ul>
                 </div>

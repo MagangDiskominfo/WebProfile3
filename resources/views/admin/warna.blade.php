@@ -24,17 +24,9 @@
     </script>
 </body>
 </html> --}}
+@extends('/admin/dashboard')
+@section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ubah Warna Latar Belakang</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-</head>
-<body>
     <div class="container mt-5">
         <h1>Ubah Warna Latar Belakang</h1>
         <input type="color" id="inputWarna" class="form-control mt-3">
@@ -48,5 +40,4 @@
             alert('Warna latar belakang disimpan!');
         }
     </script>
-</body>
-</html>
+@endsection
