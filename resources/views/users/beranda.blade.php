@@ -161,7 +161,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-start">
-                        <div class="card maps-card mx-4 mb-4 ">
+                        <div class="card maps-card mx-5 mb-5 mt-5 ">
                             <div class="card-body">
                                 <div class="pt-2">
                                     <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>
@@ -173,15 +173,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card maps-card mx-4 ">
+                        <div class="card maps-card mx-3 border-0">
                             <div class="card-body">
                                 <div class="pt-2">
-                                    <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>
-                                        {{ $footer[0]->wilayah }}</p>
-                                    <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i>
-                                        {{ $footer[0]->nomor_instansi }}</p>
-                                    <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i>
-                                        {{ $footer[0]->email_instansi }}</p>
+                                    <a class="fw-bold text-primary" href="/vidio-detail" style="margin-right: 3rem; text-decoration: none;">
+                                        <i class="bi bi-youtube" style="font-size: 1.5rem;" ></i>
+                                    </a>
+                                    <a class="fw-bold text-primary" href="/vidio-detail" style="margin-right: 3rem; text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 1.5rem;" ></i>
+                                    </a>
+                                    <a class="fw-bold text-primary" href="/vidio-detail" style="margin-right: 3rem; text-decoration: none;">
+                                        <i class="bi bi-facebook" style="font-size: 1.5rem;" ></i>
+                                    </a>
+                                    <a class="fw-bold text-primary" href="/vidio-detail" style="text-decoration: none;">
+                                        <i class="bi bi-twitter" style="font-size: 1.5rem;" ></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
