@@ -160,7 +160,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-start" style="margin-top: 12rem ">
+                    <div class="col-md-4 text-start">
+                        <div class="card maps-card mx-4 mb-4 ">
+                            <div class="card-body">
+                                <div class="pt-2">
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>
+                                        {{ $footer[0]->wilayah }}</p>
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i>
+                                        {{ $footer[0]->nomor_instansi }}</p>
+                                    <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i>
+                                        {{ $footer[0]->email_instansi }}</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card maps-card mx-4 ">
                             <div class="card-body">
                                 <div class="pt-2">

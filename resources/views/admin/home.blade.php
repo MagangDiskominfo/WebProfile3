@@ -39,7 +39,7 @@
                     <label for="nama_wakil">Nama Wakil Instansi</label>
                     <input type="text" class="form-control" id="nama_wakil" name="nama_wakil"  placeholder="Masukkan Nama Wakil Instansi" required>
                 </div>
-                <button type="submit" class="btn font-weight-bold text-white" style="background-color: #002D85; border-color: #002D85;">Simpan Perubahan</button>
+                <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
             </form>
         </div>
     </div>

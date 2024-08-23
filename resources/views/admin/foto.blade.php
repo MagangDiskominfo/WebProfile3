@@ -14,7 +14,7 @@
                     <label for="deskripsi">Deskripsi</label>
                     <textarea id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                <button type="submit">Simpan Perubahan</button>
             </form>
             <!-- Tabel CRUD untuk menampilkan data kegiatan -->
             <h2>Daftar Foto</h2>

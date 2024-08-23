@@ -131,7 +131,7 @@
             <h3 class="text-white font-family-Poppins"><b>{{ $home->nama_instansi }}</b></h3>
         </div>
         <div class="right">
-            <a href="#" class="back-link">Kembali</a>
+            <a href="/" class="back-link">Kembali</a>
             <h2>Masuk ke Dashboard Admin</h2>
             <p>Silahkan isi dengan benar untuk mengakses dashboard Admin!</p>
             <form action='/login' method="POST">
@@ -155,7 +155,6 @@
                     @enderror
                 </div>
                 <button type="submit">Masuk</button>
-                <a href="#" class="forgot-password">Lupa Kata Sandi?</a>
             </form>
         </div>
     </div>
