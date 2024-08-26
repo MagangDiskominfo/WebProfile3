@@ -1,20 +1,21 @@
 <nav class="col-md-2 d-none d-md-block bg-white sidebar">
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
-            <li class="nav-item jarak">
+            <li class="nav-item logo">
                 <a class="nav-link " href="/dashboard">
-                    <img src="/img/diskom.png" alt="Logo" class="dashboard-logo">
+                    <img src="/img/logogepika.png" alt="Logo" class="dashboard-logo" height="100">
                 </a>
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link text-primary" href="/dashboard">
-                    <span data-feather="home"></span>
+                    <img src="/img/dashboard.svg" alt="Dashboard Logo" width="20" height="20">
                     Dashboard
                 </a>
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link collapsed text-primary" href="#informasiSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="informasiSubMenu">
-                    <span data-feather="layers"></span>
+                    {{-- <span data-feather="layers"></span> --}}
+                    <img src="/img/info.svg" alt="Dashboard Logo" width="20" height="20">
                     Kelola Informasi
                 </a>
                 <div id="informasiSubMenu" class="collapse">
@@ -45,7 +46,7 @@
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link collapsed text-primary" href="#berandaSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="berandaSubMenu">
-                    <span data-feather="image"></span>
+                    <img src="/img/galeri.svg" alt="Dashboard Logo" width="22" height="22">
                     Kelola Galeri
                 </a>
                 <div id="berandaSubMenu" class="collapse">
@@ -61,7 +62,7 @@
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link collapsed text-primary" href="#webSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="webSubMenu">
-                    <span data-feather="cloud-rain"></span>
+                    <img src="/img/warna.svg" alt="Dashboard Logo" width="20" height="20">
                     Warna Website
                 </a>
                 <div id="webSubMenu" class="collapse">
@@ -80,13 +81,13 @@
             </li> --}}
             <li class="nav-item jarak">
                 <a class="nav-link text-primary" href="/buku-panduan">
-                    <span data-feather="book"></span>
+                    <img src="/img/bukupanduan.svg" alt="Dashboard Logo" width="22" height="22">
                     Buku Panduan
                 </a>
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link text-primary" href="/logout">
-                    <span data-feather="log-out"></span>
+                    <img src="/img/logout.svg" alt="Dashboard Logo" width="22" height="22">
                     Logout
                 </a>
             </li>
