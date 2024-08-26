@@ -15,9 +15,7 @@ class PostFooter extends Controller
 
     public function postfooter(Request $request) {
         $validateData = $request->validate([
-            'wilayah' => 'required|string|max:255',
-            'nomor_instansi' => 'required|string|max:255',
-            'email_instansi' => 'required|email|max:255',
+            'copyright' => 'required|string|max:255',
         ]);
 
         $result = Footer::where('id', 1)->update($validateData);;

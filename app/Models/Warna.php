@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Footer extends Model
+class Warna extends Model
 {
     use HasFactory;
-    protected $table = 'footer';
+    protected $table = 'warna';
     protected $fillable = [
-        'copyright',
+        'warna',
     ];
 }

@@ -150,11 +150,12 @@
         <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
                 <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p>
+                @foreach ( $lokasi as $item)
                 <div class="row">
                     <div class="col-md-8 text-center">
                         <div class="card maps-card mx-4 ">
                             <div class="card-body">
-                                <iframe src="{{ $lokasi[0]->lokasi_link }}" width="700" height="500"
+                                <iframe src= "{{ $item->lokasi_link }}" width="700" height="500"
                                     style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
@@ -165,34 +166,35 @@
                             <div class="card-body">
                                 <div class="pt-2">
                                     <p class="fs-6 fw-normal"> <i class="bi bi-geo-alt-fill"></i>
-                                        {{ $footer[0]->wilayah }}</p>
+                                        {{ $item->wilayah }}</p>
                                     <p class="fs-6 fw-normal"> <i class="bi bi-telephone-fill"></i>
-                                        {{ $footer[0]->nomor_instansi }}</p>
+                                        {{ $item->nomor_instansi }}</p>
                                     <p class="fs-6 fw-normal"> <i class="bi bi-envelope-fill"></i>
-                                        {{ $footer[0]->email_instansi }}</p>
+                                        {{ $item->email_instansi }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="card maps-card mx-3 border-0">
                             <div class="card-body">
                                 <div class="pt-2">
-                                    <a class="fw-bold text-primary" href="/vidio-detail" style="margin-right: 3rem; text-decoration: none;">
+                                    <a class="fw-bold text-primary" href="{{ $item->yt_link }}" style="margin-right: 3rem; text-decoration: none;">
                                         <i class="bi bi-youtube" style="font-size: 1.5rem;" ></i>
                                     </a>
-                                    <a class="fw-bold text-primary" href="/vidio-detail" style="margin-right: 3rem; text-decoration: none;">
+                                    <a class="fw-bold text-primary" href="{{ $item->ig_link }}" style="margin-right: 3rem; text-decoration: none;">
                                         <i class="bi bi-instagram" style="font-size: 1.5rem;" ></i>
                                     </a>
-                                    <a class="fw-bold text-primary" href="/vidio-detail" style="margin-right: 3rem; text-decoration: none;">
+                                    <a class="fw-bold text-primary" href="{{ $item->fb_link }}" style="margin-right: 3rem; text-decoration: none;">
                                         <i class="bi bi-facebook" style="font-size: 1.5rem;" ></i>
                                     </a>
-                                    <a class="fw-bold text-primary" href="/vidio-detail" style="text-decoration: none;">
-                                        <i class="bi bi-twitter" style="font-size: 1.5rem;" ></i>
+                                    <a class="fw-bold text-primary" href="{{ $item->x_link }}" style="text-decoration: none;">
+                                        <i class="bi bi-twitter " style="font-size: 1.5rem;" ></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </section>
 
@@ -225,7 +227,7 @@
             <div class="container text-center">
                 {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
                 {{-- <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;"> --}}
-                <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
+                <p>Copyright &copy; {{ $footer[0]->copyright }}</p>  
             </div>
         </div>
     </footer>

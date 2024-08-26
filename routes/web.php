@@ -15,6 +15,7 @@ use App\Http\Controllers\PostLokasi;
 use App\Http\Controllers\PostStruktur;
 use App\Http\Controllers\PostVidio;
 use App\Http\Controllers\PostVisimisi;
+use App\Http\Controllers\PostWarna;
 use App\Http\Controllers\ShowBeranda;
 use App\Http\Middleware\PreventBackHistory;
 
@@ -57,7 +58,6 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
 
     Route::get('/vidio', [PostVidio::class, 'index']);      
     Route::post('/vidio', [PostVidio::class, 'postvidio']);
-    Route::get('/warna', [PostVidio::class, 'warna']);
 
     Route::get('/foto', [PostFoto::class, 'foto']);
     Route::post('/foto', [PostFoto::class, 'postfoto']);
@@ -78,8 +78,12 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::get('/footer', [PostFooter::class, 'footer']);
     Route::post('/footer', [PostFooter::class, 'postfooter']);
 
+    Route::get('/warna', [PostWarna::class, 'warna']);
+    Route::post('/warna', [PostWarna::class, 'postwarna']);
+
     Route::get('/dashboard', [Halaman::class, 'halaman']);
     Route::get('/logout', [login::class, 'logout']);
+    Route::get('/buku-panduan', function () {return view('admin.buku_panduan');});
 
     // Route::get('/login', [CaptchaController::class, 'getForm']);
     // // Route::get('/login', [login::class, 'logout']);  

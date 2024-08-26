@@ -12,5 +12,12 @@ class Lokasi extends Model
     protected $table = 'lokasi';
     protected $fillable = [
         'lokasi_link',
+        'wilayah',
+        'nomor_instansi',
+        'email_instansi',
+        'yt_link',
+        'ig_link',
+        'fb_link',
+        'x_link',
     ];
 }

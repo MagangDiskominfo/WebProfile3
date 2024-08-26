@@ -72,6 +72,18 @@
                     </ul>
                 </div>
             </li>
+            {{-- <li class="nav-item jarak">
+                <a class="nav-link collapsed text-primary" href="/buku-panduan" data-toggle="collapse" aria-expanded="false" >
+                    <span data-feather="book"></span>
+                    Buku Panduan
+                </a>
+            </li> --}}
+            <li class="nav-item jarak">
+                <a class="nav-link text-primary" href="/buku-panduan">
+                    <span data-feather="book"></span>
+                    Buku Panduan
+                </a>
+            </li>
             <li class="nav-item jarak">
                 <a class="nav-link text-primary" href="/logout">
                     <span data-feather="log-out"></span>

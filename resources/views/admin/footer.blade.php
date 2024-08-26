@@ -8,17 +8,9 @@
                 <p>Silahkan isi dengan benar untuk membuat Footer Website mu!</p>
                 @csrf
                 <div class="form-group">
-                    <label for="wilayah">Wilayah</label>
-                    <input type="text" class="form-control" id="wilayah" name="wilayah">
-                </div>
-                <div class="form-group">
-                    <label for="nomor">Nomor Instansi</label>
-                    <input type="text" class="form-control" id="nomor" name="nomor_instansi" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Instansi</label>
-                    <input type="email" class="form-control" id="email" name="email_instansi" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                </div>        
+                    <label for="footer">Footer</label>
+                    <input type="text" class="form-control" id="footer" name="copyright">
+                </div>       
                 <button type="submit">Simpan Perubahan</button>
             </form>
         </div>

@@ -1,29 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-
-    </style>
-</head>
-<body>
-    <h1>Ganti Warna</h1>
-    <input type="text" id="gantiWarnaText">
-    <input type="color" id="inputWarna">
-    <input type="button" id="tombolWarna" value= "Ganti Warna" onclick="gantiWarna()">
-    
-    <script>
-        function gantiWarna() {
-            let color = document.getElementById('inputWarna').value;
-            document.body.style.backgroundColor = color;
-            document.getElementById('gantiWarnaText').value = color;
-        }
-    </script>
-</body>
-</html> --}}
 @extends('/admin/dashboard')
 @section('content')
 

@@ -8,9 +8,6 @@ use Illuminate\Http\Request;
 
 class PostVidio extends Controller
 {
-    public function warna(){
-        return view('admin.warna');
-    }
     
     public function index(){
         return view('admin.vidio');
