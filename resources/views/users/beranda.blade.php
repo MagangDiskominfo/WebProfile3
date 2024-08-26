@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
 </head>
 
-{{-- <body style="background-color: #002D85"> --}}
+<body style="background-color: #002D85">
 <body>
     <!-- Navigasi di bagian atas -->
     @include('users/layouts/navbar')
@@ -234,14 +234,14 @@
         </div>
     </footer>
 
-    <script>
+    {{-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             let savedColor = localStorage.getItem('backgroundColor');
             if (savedColor) {
                 document.body.style.backgroundColor = savedColor;
             }
         });
-    </script>
+    </script> --}}
 
 
     <!-- Bootstrap JS Bundle (Popper.js included) -->

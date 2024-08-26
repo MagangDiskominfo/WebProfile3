@@ -1,17 +1,26 @@
 @extends('/admin/dashboard')
 @section('content')
-
-    <div class="container mt-5">
-        <h1>Ubah Warna Latar Belakang</h1>
-        <input type="color" id="inputWarna" class="form-control mt-3">
-        <button class="btn btn-primary mt-3" onclick="gantiWarna()">Simpan Warna</button>
+<div class="container">
+    <div class="card rounded-3 shadow-sm">
+        <div class="card-body mx-4 my-2">
+            <form action="/warna" method="POST" enctype="multipart/form-data">
+                <h2>Atur Warna Website</h2>
+                <p>Silahkan isi dengan benar untuk Warna Website mu!</p>
+                @csrf
+                <div class="form-group">
+                    <label for="warna">Warna Backgorund</label>
+                    <input type="color" class="form-control" id="warna" name="warna">
+                </div>       
+                <button type="submit">Simpan Perubahan</button>
+            </form>
+        </div>
     </div>
-    
-    <script>
+</div>
+    {{-- <script>
         function gantiWarna() {
             let color = document.getElementById('inputWarna').value;
             localStorage.setItem('backgroundColor', color);
             alert('Warna latar belakang disimpan!');
         }
-    </script>
+    </script> --}}
 @endsection

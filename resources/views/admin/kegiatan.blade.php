@@ -23,7 +23,7 @@
             </form>
 
             <!-- Tabel CRUD untuk menampilkan data kegiatan -->
-            <h2>Daftar Berita</h2>
+            <br><h2 class="font-weight-bold">Daftar Kegiatan</h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -45,7 +45,7 @@
                                     width="100"></td>
                             <td>
                                 <!-- Tambahkan tombol edit dan delete -->
-                                <a href="/kegiatan/edit/{{ $kegiatan->id }}" class="btn btn-warning">Edit</a>
+                                <a href="/kegiatan/edit/{{ $kegiatan->id }}" class="btn btn-success">Edit</a>
                                 <a href="/kegiatan/delete/{{ $kegiatan->id }}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>

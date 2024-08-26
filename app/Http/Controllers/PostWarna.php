@@ -20,9 +20,9 @@ class PostWarna extends Controller
         $result = Warna::where('id', 1)->update(['warna' => $validateData['warna']]);
     
         if ($result) {
-            return redirect('/')->with('success', 'Warna berhasil diperbarui.');
+            return redirect('/');
         } else {
-            return redirect('/dashboard')->with('error', 'Gagal memperbarui warna.');
+            return redirect('/dashboard');
         }
     }
 }

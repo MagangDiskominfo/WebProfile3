@@ -43,9 +43,9 @@ class PostKegiatan extends Controller
 
         // Mengembalikan respons berdasarkan hasil penyimpanan
         if ($result) {
-            return redirect('/')->with('success', 'Berhasil menambahkan kegiatan');
+            return redirect('/dashboard');
         } else {
-            return redirect('/dashboard')->with('error', 'Gagal menambahkan kegiatan!');
+            return redirect('/kegiatan');
         }
     }
 
@@ -76,9 +76,9 @@ class PostKegiatan extends Controller
 
         // Mengembalikan respons berdasarkan hasil penyimpanan
         if ($result) {
-            return redirect('/dashboard')->with('success', 'Berhasil menambahkan kegiatan');
+            return redirect('/kegiatan');
         } else {
-            return redirect('/dashboard')->with('error', 'Gagal menambahkan kegiatan!');
+            return redirect('/dashboard');
         }
     }
 
