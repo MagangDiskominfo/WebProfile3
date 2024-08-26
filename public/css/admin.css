@@ -143,6 +143,20 @@ button:hover {
     margin-top: 15px; /* Jarak atas */
     margin-bottom: 15px; /* Jarak bawah */
 }
+.sidebar .logo {
+    margin-top: 15px; /* Jarak atas */
+    margin-bottom: 15px; /* Jarak bawah */
+}
+
+.sidebar .logo {
+    padding: 20px 0;
+}
+
+.dashboard-logo {
+    max-width: 100%; /* Sesuaikan dengan ukuran container */
+    height: auto;
+}
+
 
 .sidebar .dashboard-logo {
     width: auto; /* Sesuaikan ukuran logo */

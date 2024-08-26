@@ -133,7 +133,7 @@
                 <div class="container text-center">
                     {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
                     {{-- <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;"> --}}
-                    <p>Copyright &copy; Diskominfo Kota Jambi 2024. All rights reserved.</p>
+                    <p>Copyright &copy; {{ $footer->copyright }}</p>
                 </div>
             </div>
     </footer>

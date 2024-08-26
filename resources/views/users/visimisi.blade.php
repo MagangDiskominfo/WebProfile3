@@ -94,7 +94,7 @@
             </div> --}}
             <div class="container text-center">
                 {{-- <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;"> --}}
-                <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
+                <p>Copyright &copy; {{ $footer->copyright }}</p>
             </div>
         </div>
     </footer>
