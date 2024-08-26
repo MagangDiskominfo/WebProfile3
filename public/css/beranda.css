@@ -37,6 +37,10 @@ body {
     padding-left: 5rem;
     padding-right: 5rem;
 }
+.custom-padding-detail {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
 
 .position-relative {
     position: relative; 
@@ -133,6 +137,26 @@ body {
     width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
     display: inline-block; /* Agar lebar kartu sesuai dengan konten */
     border: none;
+    border-radius: 15px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.detail-card {
+    border-width: 3px; /* Atur lebar garis tepi */
+    width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
+    display: inline-block; /* Agar lebar kartu sesuai dengan konten */
+    border: none;
+    display: block; 
+    border-radius: 15px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-card {
+    border-width: 3px; /* Atur lebar garis tepi */
+    width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
+    display: inline-block; /* Agar lebar kartu sesuai dengan konten */
+    border: none;
+    display: block; 
     border-radius: 15px;
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -244,4 +268,11 @@ body {
 .carousel-control-next-icon {
     background-color: #000;
     border-radius: 50%;
+}
+
+.position-relative-detail {
+    position: relative; 
+    background-size: cover;
+    background-position: center center; 
+    min-height: 713px; /* Sesuaikan tinggi sesuai kebutuhan */
 }
