@@ -1,3 +1,6 @@
+<?php
+    $warna = App\Models\Warna::first()->warna;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +12,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
+    <style>
+        
+        :root {
+            --warna: {{ $warna }};
+        }
+
+    </style>
 </head>
 
-<body style="background-color: #002D85">
+<body style="background-color: var(--warna)">
 <body>
     <!-- Navigasi di bagian atas -->
     @include('users/layouts/navbar')
@@ -62,7 +72,7 @@
         <!-- Section Berita -->
         <section id="berita" class="news-section bg-white pb-4">
             <div class="container">
-                <p class="text-center text-primary fs-1 fw-bold font-family-Poppins m-0 px-3 py-4">Berita</p>
+                <p class="text-center fs-1 fw-bold font-family-Poppins m-0 px-3 py-4" style="color: var(--warna)">Berita</p>
                 <div id="newsCarouselBerita" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
                         @foreach ($berita->chunk(3) as $chunk) <!-- Mengelompokkan 3 berita per slide -->
@@ -77,7 +87,7 @@
                                                     <h5 class="card-title">{{ $item->title }}</h5>
                                                     <p class="card-text">{{ $item->excerpt }}</p>
                                                     <a href="/users/detail-berita/{{ $item->id }}"
-                                                        class="btn news-card-button">Baca Selengkapnya</a>
+                                                        class="btn news-card-button" style="background-color: var(--warna)">Baca Selengkapnya</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,7 +114,7 @@
         <section id="kegiatan" class="news-section bg-primary-custom pb-4">
             <div class="container">
                 <p class="text-center text-white fs-1 fw-bold font-family-Poppins m-0 px-3 py-4">Kegiatan</p>
-                <div id="newsCarouselKegiatan" class="carousel slide" data-bs-ride="carousel" >
+                <div id="newsCarouselKegiatan" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($kegiatan->chunk(3) as $chunk) <!-- Mengelompokkan 3 item per slide -->
                             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
@@ -151,7 +161,7 @@
         </section> --}}
         <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
-                <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p>
+                <p class="text-center fs-1 fw-bold font-family-Poppins px-3 py-3" style="color: var(--warna)">Lokasi</p>
                 @foreach ( $lokasi as $item)
                 <div class="row">
                     <div class="col-md-8 text-center">

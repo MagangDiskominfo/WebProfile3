@@ -87,16 +87,16 @@ class PostBerita extends Controller
         }
     }
 
-    // public function active(Request $request, $id) {
-    //     $berita = Berita::find($id);
+    public function active(Request $request, $id) {
+        $berita = Berita::find($id);
 
-    //     // Perbarui status active berdasarkan data dari toggle switch
-    //     $berita->active = $request->input('active');
+        // Perbarui status active berdasarkan data dari toggle switch
+        $berita->active = $request->input('active');
     
-    //     // Simpan perubahan ke database
-    //     $berita->save();
+        // Simpan perubahan ke database
+        $berita->save();
     
-    //     // Kembalikan respons JSON
-    //     return response()->json(['success' => 'Status berhasil diperbarui.']);
-    // }
+        // Kembalikan respons JSON
+        return response()->json(['success' => 'Status berhasil diperbarui.']);
+    }
 }

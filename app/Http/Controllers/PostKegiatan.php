@@ -30,6 +30,7 @@ class PostKegiatan extends Controller
         ]);
 
         $validateData["excerpt"] = Str::limit($validateData['deskripsi_kegiatan'], 300);
+        $validateData["active"] = 1;        
 
         // Jika ada file gambar yang diunggah, proses penyimpanannya
         if ($request->hasFile('gambar_kegiatan')) {
@@ -63,6 +64,8 @@ class PostKegiatan extends Controller
             'gambar_kegiatan' => 'image|mimes:png,jpg,jpeg|max:2024',
         ]);
 
+        $validateData["excerpt"] = Str::limit($validateData['deskripsi_kegiatan'], 300);
+
         // Jika ada file gambar yang diunggah, proses penyimpanannya
         if ($request->hasFile('gambar_kegiatan')) {
             $image_name = time() . '_' . $request->file('gambar_kegiatan')->getClientOriginalName();
@@ -90,5 +93,18 @@ class PostKegiatan extends Controller
         } else {
             return redirect('/kegiatan');
         }
+    }
+
+    public function active(Request $request, $id) {
+        $kegiatan = Kegiatan::find($id);
+
+        // Perbarui status active berdasarkan data dari toggle switch
+        $kegiatan->active = $request->input('active');
+    
+        // Simpan perubahan ke database
+        $kegiatan->save();
+    
+        // Kembalikan respons JSON
+        return response()->json(['success' => 'Status berhasil diperbarui.']);
     }
 }

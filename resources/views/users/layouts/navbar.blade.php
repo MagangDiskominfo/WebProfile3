@@ -1,4 +1,12 @@
-<nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
+<?php
+    $warna = App\Models\Warna::first()->warna;
+?>
+<style>      
+    :root {
+        --warna: {{ $warna }};    
+    }
+</style>
+<nav class="navbar navbar-expand-lg shadow-lg " style="background-color: var(--warna)">
     <div class="container custom-padding">
         <a class=" navbar-brand " href="#">
             <img src="/storage/home/{{ $home[0]->logo }}" alt="Logo" style="height: 40px;">
@@ -30,7 +38,7 @@
                     </ul>
                 </li>
                 <li class="nav-item ms-5">
-                    <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary"
+                    <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3" style="color: var(--warna)"
                         href="/login">Masuk</a>
                 </li>
             </ul>
