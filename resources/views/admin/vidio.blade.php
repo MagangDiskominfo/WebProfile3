@@ -1,4 +1,5 @@
 @extends('/admin/dashboard')
+@section('title', 'Kelola Galeri / Vidio')
 @section('content')
 <div class="container" style="min-height: 74vh">
     <div class="card rounded-3 shadow-sm">

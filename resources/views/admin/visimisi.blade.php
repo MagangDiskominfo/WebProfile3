@@ -1,4 +1,5 @@
 @extends('/admin/dashboard')
+@section('title', 'Kelola Informasi / Visi Misi')
 @section('content')
 <div class="container">
     <div class="card rounded-3 shadow-sm" style="min-height: 80vh">

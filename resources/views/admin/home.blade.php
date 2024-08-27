@@ -1,4 +1,5 @@
 @extends('/admin/dashboard')
+@section('title', 'Kelola Informasi / Beranda') <!-- Menambahkan judul halaman -->
 @section('content')
 <div class="container">
     <div class="card rounded-3 shadow-sm">
@@ -13,7 +14,8 @@
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi Website</label>
-                    <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi Website" required>
+                    {{-- <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi Website" required> --}}
+                    <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5" placeholder="Masukkan Deskripsi Website" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="logo">Logo Website</label>

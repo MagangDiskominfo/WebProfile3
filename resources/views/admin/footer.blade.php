@@ -1,4 +1,5 @@
 @extends('/admin/dashboard')
+@section('title', 'Kelola Informasi / Footer')
 @section('content')
 <div class="container" style="min-height: 80vh">
     <div class="card rounded-3 shadow-sm">
