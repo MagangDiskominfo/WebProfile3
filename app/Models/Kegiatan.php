@@ -15,5 +15,6 @@ class Kegiatan extends Model
         'deskripsi_kegiatan',
         'excerpt',
         'gambar_kegiatan',
+        'active',
     ];
 }

@@ -21,7 +21,8 @@
                     </div>
                     <button type="submit" style="width: 10%;">Submit</button>
                 </form>
-                <br><h2 class="font-weight-bold">Daftar Berita</h2>
+                <br>
+                <h2 class="font-weight-bold">Daftar Berita</h2>
                 <table class="table">
                     <thead>
                         <tr>
@@ -41,17 +42,19 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $berita->title }}</td>
                                 <td>{{ $berita->body }}</td>
-                                <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}" width="100"></td>
+                                <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}"
+                                        width="100"></td>
                                 <td>
                                     <a href="/berita/edit/{{ $berita->id }}" class="btn btn-success">Edit</a>
                                     <a href="/berita/delete/{{ $berita->id }}" class="btn btn-danger">Delete</a>
                                 </td>
-                                {{-- <td>
+                                <td>
                                     <label class="switch">
-                                        <input type="checkbox" data-id="{{ $berita->id }}" {{ $berita->active ? 'checked' : '' }}>
+                                        <input type="checkbox" data-id="{{ $berita->id }}"
+                                            {{ $berita->active ? 'checked' : '' }}>
                                         <span class="slider round"></span>
                                     </label>
-                                </td> --}}
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -61,11 +64,11 @@
     </div>
 
     <!-- Script untuk menangani perubahan status toggle switch -->
-    {{-- <script>
+    <script>
         document.querySelectorAll('.switch input').forEach(function(toggleSwitch) {
             toggleSwitch.addEventListener('change', function() {
                 let beritaId = this.getAttribute('data-id');
-                let activeStatus = this.checked ? 0 : 1;
+                let activeStatus = this.checked ? 1 : 0;
 
                 fetch(`/berita/toggle/${beritaId}`, {
                     method: 'POST',
@@ -73,7 +76,9 @@
                         'Content-Type': 'application/json',
                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
                     },
-                    body: JSON.stringify({ active: activeStatus })
+                    body: JSON.stringify({
+                        active: activeStatus
+                    })
                 }).then(response => {
                     if (response.ok) {
                         console.log('Status berhasil diperbarui');
@@ -83,5 +88,5 @@
                 });
             });
         });
-    </script> --}}
+    </script>
 @endsection

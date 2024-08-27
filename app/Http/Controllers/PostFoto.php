@@ -65,9 +65,9 @@ class PostFoto extends Controller
         ->update($validateData);
 
         if ($result) {
-            return redirect('/');
+            return redirect('/dahsboard');
         } else {
-            return redirect('/dashboard');
+            return redirect('/');
         }
     }
 

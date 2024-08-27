@@ -55,6 +55,7 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::post('/kegiatan/update/{id}', [PostKegiatan::class, 'update']);
     Route::get('/kegiatan/delete/{id}', [PostKegiatan::class, 'delete']);
     Route::get('/kegiatan/changeStatus', [PostKegiatan::class, 'changeStatus']);
+    Route::post('/kegiatan/toggle/{id}', [PostKegiatan::class, 'active']);
 
     Route::get('/vidio', [PostVidio::class, 'index']);      
     Route::post('/vidio', [PostVidio::class, 'postvidio']);
@@ -84,6 +85,7 @@ Route::middleware(['auth', PreventBackHistory::class])->group(function(){
     Route::get('/dashboard', [Halaman::class, 'halaman']);
     Route::get('/logout', [login::class, 'logout']);
     Route::get('/buku-panduan', function () {return view('admin.buku_panduan');});
+
 
     // Route::get('/login', [CaptchaController::class, 'getForm']);
     // // Route::get('/login', [login::class, 'logout']);  
