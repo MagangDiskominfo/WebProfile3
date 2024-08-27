@@ -1,4 +1,5 @@
 @extends('/admin/dashboard')
+@section('title', 'Kelola Galeri / Foto')
 @section('content')
 <div class="container">
     <div class="card rounded-3 shadow-sm" >

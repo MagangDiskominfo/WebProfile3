@@ -1,22 +1,23 @@
-<nav class="col-md-2 d-none d-md-block bg-white sidebar">
+<nav class="col-md-2 d-none d-md-block bg-white sidebar px-3">
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item logo">
                 <a class="nav-link " href="/dashboard">
-                    <img src="/img/logogepika2.svg" alt="Logo" class="dashboard-logo" height="150">
+                    <img src="/img/logogepika2.svg" alt="Logo" class="dashboard-logo">
                 </a>
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link text-primary" href="/dashboard">
                     <img src="/img/dashboard.svg" alt="Dashboard Logo" width="20" height="20">
-                    Dashboard
+                    Dashboard 
                 </a>
             </li>
             <li class="nav-item jarak">
                 <a class="nav-link collapsed text-primary" href="#informasiSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="informasiSubMenu">
                     {{-- <span data-feather="layers"></span> --}}
                     <img src="/img/info.svg" alt="Dashboard Logo" width="20" height="20">
-                    Kelola Informasi
+                    Kelola Informasi 
+                    <img src="/img/cdown.svg" alt="Dashboard Logo" width="20" height="20">
                 </a>
                 <div id="informasiSubMenu" class="collapse">
                     <ul class="nav flex-column ml-3">
@@ -48,6 +49,7 @@
                 <a class="nav-link collapsed text-primary" href="#berandaSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="berandaSubMenu">
                     <img src="/img/galeri.svg" alt="Dashboard Logo" width="22" height="22">
                     Kelola Galeri
+                    <img src="/img/cdown.svg" alt="Dashboard Logo" width="20" height="20">
                 </a>
                 <div id="berandaSubMenu" class="collapse">
                     <ul class="nav flex-column ml-3">
@@ -61,17 +63,17 @@
                 </div>
             </li>
             <li class="nav-item jarak">
-                <a class="nav-link collapsed text-primary" href="#webSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="webSubMenu">
+                <a class="nav-link text-primary" href="/warna" >
                     <img src="/img/warna.svg" alt="Dashboard Logo" width="20" height="20">
                     Warna Website
                 </a>
-                <div id="webSubMenu" class="collapse">
+                {{-- <div id="webSubMenu" class="collapse">
                     <ul class="nav flex-column ml-3">
                         <li class="nav-item">
                             <a class="nav-link" href="/warna">Warna Web</a>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </li>
             {{-- <li class="nav-item jarak">
                 <a class="nav-link collapsed text-primary" href="/buku-panduan" data-toggle="collapse" aria-expanded="false" >

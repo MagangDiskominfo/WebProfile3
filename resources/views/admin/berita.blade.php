@@ -1,4 +1,5 @@
 @extends('/admin/dashboard')
+@section('title', 'Kelola Informasi / Berita') <!-- Menambahkan judul halaman -->
 @section('content')
     <div class="container">
         <div class="card rounded-3 shadow-sm">

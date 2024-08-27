@@ -149,7 +149,7 @@
                         <div>
                             {!! Captcha::img()!!}
                         </div>
-                    <input type="text" id="captcha" name="captcha" required>
+                    <input type="text" id="captcha" name="captcha" required placeholder="Masukkan Captcha">
                     @error('captcha')
                     <div>{{ $message }}</div>                        
                     @enderror

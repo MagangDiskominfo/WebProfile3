@@ -1,26 +1,27 @@
 @extends('/admin/dashboard')
+@section('title', 'Kelola Informasi / Kegiatan')
 @section('content')
-    <div class="container">
-        <div class="card rounded-3 shadow-sm">
-            <div class="card-body mx-4 my-2">
-                <form action="/kegiatan" method="POST" enctype="multipart/form-data">
-                    <h2>Atur Kegiatan Website</h2>
-                    <p>Silahkan isi dengan benar untuk membuat kegiatan website mu!</p>
-                    @csrf
-                    <div class="form-group">
-                        <label for="judul">Judul Kegiatan</label>
-                        <input type="text" id="judul" name="judul_kegiatan" placeholder="Masukkan Judul Kegiatan">
-                    </div>
-                    <div class="form-group">
-                        <label for="deskripsi">Deskripsi Kegiatan</label>
-                        <textarea id="deskripsi" name="deskripsi_kegiatan" placeholder="Masukkan Deskripsi Kegiatan"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Gambar Kegiatan</label>
-                        <input type="file" class="form-control-file" id="image" name="gambar_kegiatan" required>
-                    </div>
-                    <button type="submit">Simpan Perubahan</button>
-                </form>
+<div class="container">
+    <div class="card rounded-3 shadow-sm">
+        <div class="card-body mx-4 my-2">
+            <form action="/kegiatan" method="POST" enctype="multipart/form-data">
+                <h2 class="font-weight-bold">Atur Kegiatan Website</h2>
+                <p>Silahkan isi dengan benar untuk membuat kegiatan website mu!</p>
+                @csrf
+                <div class="form-group">
+                    <label for="judul">Judul Kegiatan</label>
+                    <input type="text" id="judul" name="judul_kegiatan" placeholder="Masukkan Judul Kegiatan">
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi Kegiatan</label>
+                    <textarea id="deskripsi" name="deskripsi_kegiatan" placeholder="Masukkan Deskripsi Kegiatan"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Gambar Kegiatan</label>
+                    <input type="file" class="form-control-file" id="image" name="gambar_kegiatan" required>
+                </div>
+                <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
+            </form>
 
                 <!-- Tabel CRUD untuk menampilkan data kegiatan -->
                 <br>

@@ -1,4 +1,4 @@
-@extends('/admin/dashboard')
+@extends('/admin/dashboard1')
 @section('content')
 
 <style>
@@ -6,12 +6,13 @@
     display: flex;
     align-items: center;
     height: 120px;
-    background-color: #e9ecef;
+    width: 230px;
+    background-color: #ffffff;
     border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
+    border-radius: 0.80rem;
     text-align: left;
     margin: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
     padding: 10px;
   }
 
@@ -37,27 +38,27 @@
 <div class="container "  >
   <div class="card rounded-3 shadow-sm " style="min-height: 80vh" >
       <div class="card-body mx-4 my-2">
-      <h4>Statistik Dashboard</h4>
+      <h4 class="font-weight-bold text-primary">Statistik Dashboard</h4>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="card-custom">
               <div class="icon-container">
                 <img src="/img/news.svg" alt="Logo" class="dashboard-logo" height="100">
               </div>
               <div>
-                <div class="stat-text">Berita</div>
-                <div>{{ count($berita) }}</div>
+                <div class="stat-text text-primary">Berita</div>
+                <div class="text-primary font-weight-bold" >{{ count($berita) }}</div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="card-custom">
               <div class="icon-container">
                 <img src="/img/activity.svg" alt="Logo" class="dashboard-logo" height="100">
               </div>
               <div>
-                <div class="stat-text">Kegiatan</div>
-                <div>{{ count($kegiatan) }}</div>
+                <div class="stat-text text-primary">Kegiatan</div>
+                <div class="text-primary font-weight-bold" >{{ count($kegiatan) }}</div>
               </div>
             </div>
           </div>
