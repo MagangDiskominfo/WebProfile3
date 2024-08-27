@@ -3,7 +3,7 @@
         <ul class="nav flex-column">
             <li class="nav-item logo">
                 <a class="nav-link " href="/dashboard">
-                    <img src="/img/logogepika.png" alt="Logo" class="dashboard-logo" height="100">
+                    <img src="/img/logogepika2.svg" alt="Logo" class="dashboard-logo" height="150">
                 </a>
             </li>
             <li class="nav-item jarak">

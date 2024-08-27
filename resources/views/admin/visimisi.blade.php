@@ -1,10 +1,10 @@
 @extends('/admin/dashboard')
 @section('content')
 <div class="container">
-    <div class="card rounded-3 shadow-sm">
+    <div class="card rounded-3 shadow-sm" style="min-height: 80vh">
         <div class="card-body mx-4 my-2">
             <form action="/visimisi" method="POST" enctype="multipart/form-data">
-                <h2>Atur Visi Misi Website</h2>
+                <h2 class="font-weight-bold">Atur Visi Misi Website</h2>
                 <p>Silahkan isi dengan benar untuk membuat Visi Misi Website mu!</p>
                 @csrf
                 <div class="form-group">

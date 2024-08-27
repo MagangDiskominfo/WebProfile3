@@ -19,7 +19,7 @@
                         <label for="description">Deskripsi Berita</label>
                         <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
                     </div>
-                    <button type="submit" style="width: 10%;">Submit</button>
+                    <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
                 </form>
                 <br><h2 class="font-weight-bold">Daftar Berita</h2>
                 <table class="table">
@@ -43,7 +43,7 @@
                                 <td>{{ $berita->body }}</td>
                                 <td><img src='storage/berita/{{ $berita->image_berita }}' alt="{{ $berita->title }}" width="100"></td>
                                 <td>
-                                    <a href="/berita/edit/{{ $berita->id }}" class="btn btn-success">Edit</a>
+                                    <a href="/berita/edit/{{ $berita->id }}" class="btn btn-success mb-3" >Edit</a>
                                     <a href="/berita/delete/{{ $berita->id }}" class="btn btn-danger">Delete</a>
                                 </td>
                                 {{-- <td>

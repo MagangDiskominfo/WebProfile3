@@ -1,6 +1,6 @@
 @extends('/admin/dashboard')
 @section('content')
-<div class="container">
+<div class="container" style="min-height: 80vh">
     <div class="card rounded-3 shadow-sm">
         <div class="card-body mx-4 my-2">
             <form action="/footer" method="POST" enctype="multipart/form-data">
@@ -11,7 +11,7 @@
                     <label for="footer">Footer</label>
                     <input type="text" class="form-control" id="footer" name="copyright">
                 </div>       
-                <button type="submit">Simpan Perubahan</button>
+                <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
             </form>
         </div>
     </div>

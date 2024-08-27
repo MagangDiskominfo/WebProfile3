@@ -4,7 +4,7 @@
     <div class="card rounded-3 shadow-sm">
         <div class="card-body mx-4 my-2">
             <form action="/lokasi" method="POST">
-                <h2>Atur Lokasi Website</h2>
+                <h2 class="font-weight-bold">Atur Lokasi Website</h2>
                 <p>Silahkan isi dengan benar untuk membuat Lokasi website mu!</p>
                 @csrf
                 @method('PUT')
@@ -42,7 +42,7 @@
                     <input type="text" id="x" name="x_link" placeholder="Masukkan link X (mis. https://X.com)" required>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
                 </div>
             </form>
         </div>

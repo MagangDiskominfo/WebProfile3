@@ -12,17 +12,16 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid d-flex flex-column min-vh-100">
+        <div class="row flex-grow-1">
             @include('admin/layout/sidebar')
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-0">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-0" style="margin-top:6rem">
                 @include('admin/layout/navbar')
                 @yield('content')
-                <footer>
+                <footer class="shadow-lg mt-3 mb-0 pb-1 bg-white">
                     <div class="container text-center">
                         {{-- <p>&copy; 2024 Pemerintah Provinsi Jambi. All rights reserved. © </p> --}}
-                        <hr style="border-width: 2px; border-color: white; margin-left: 4rem; margin-right: 4rem;">
-                        <p>Copyright &copy; Diskominfo Kota Jambi 2024</p>
+                        <p>Copyright &copy; Dinas Komunikasi dan Informatika Kota Jambi 2024</p>
                     </div>
                 </footer>
             </main>

@@ -4,7 +4,7 @@
     <div class="card rounded-3 shadow-sm">
         <div class="card-body mx-4 my-2">
             <form action="/kegiatan" method="POST" enctype="multipart/form-data">
-                <h2>Atur Kegiatan Website</h2>
+                <h2 class="font-weight-bold">Atur Kegiatan Website</h2>
                 <p>Silahkan isi dengan benar untuk membuat kegiatan website mu!</p>
                 @csrf
                 <div class="form-group">
@@ -19,7 +19,7 @@
                     <label for="image">Gambar Kegiatan</label>
                     <input type="file" class="form-control-file" id="image" name="gambar_kegiatan" required>
                 </div>
-                <button type="submit">Simpan Perubahan</button>
+                <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
             </form>
 
             <!-- Tabel CRUD untuk menampilkan data kegiatan -->
@@ -45,7 +45,7 @@
                                     width="100"></td>
                             <td>
                                 <!-- Tambahkan tombol edit dan delete -->
-                                <a href="/kegiatan/edit/{{ $kegiatan->id }}" class="btn btn-success">Edit</a>
+                                <a href="/kegiatan/edit/{{ $kegiatan->id }}" class="btn btn-success mb-3">Edit</a>
                                 <a href="/kegiatan/delete/{{ $kegiatan->id }}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>

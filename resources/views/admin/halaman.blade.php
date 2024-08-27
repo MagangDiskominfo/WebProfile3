@@ -5,7 +5,7 @@
   .card-custom {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 120px;
     background-color: #e9ecef;
     border: 1px solid #dee2e6;
     border-radius: 0.25rem;
@@ -18,13 +18,14 @@
   .icon-container {
     background-color: #002c77;
     color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius:10%;
     margin-right: 15px;
+    padding: 12px;
   }
 
   .stat-text {
@@ -33,31 +34,35 @@
   }
 </style>
 
-<div class="container mt-5">
-  <h4>Statistik Dashboard</h4>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card-custom">
-        <div class="icon-container">
-          <i class="fas fa-newspaper"></i>
-        </div>
-        <div>
-          <div class="stat-text">Berita</div>
-          <div>{{ count($berita) }}</div>
+<div class="container "  >
+  <div class="card rounded-3 shadow-sm " style="min-height: 80vh" >
+      <div class="card-body mx-4 my-2">
+      <h4>Statistik Dashboard</h4>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-custom">
+              <div class="icon-container">
+                <img src="/img/news.svg" alt="Logo" class="dashboard-logo" height="100">
+              </div>
+              <div>
+                <div class="stat-text">Berita</div>
+                <div>{{ count($berita) }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-custom">
+              <div class="icon-container">
+                <img src="/img/activity.svg" alt="Logo" class="dashboard-logo" height="100">
+              </div>
+              <div>
+                <div class="stat-text">Kegiatan</div>
+                <div>{{ count($kegiatan) }}</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card-custom">
-        <div class="icon-container">
-          <i class="fas fa-users"></i>
-        </div>
-        <div>
-          <div class="stat-text">Kegiatan</div>
-          <div>{{ count($kegiatan) }}</div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 

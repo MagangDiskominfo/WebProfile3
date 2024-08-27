@@ -18,6 +18,7 @@ return [
         'height' => 36,
         'quality' => 90,
         'math' => true,
+        'fontColors' => ['#002D85'],
     ],
 
     'flat' => [
@@ -26,15 +27,17 @@ return [
         'height' => 46,
         'quality' => 90,
         'lines' => 6,
-        'bgImage' => false,
-        'bgColor' => '#ecf2f4',
-        'fontColors' => ['#2c3e50', '#c0392b', '#16a085', '#c0392b', '#8e44ad', '#303f9f', '#f57c00', '#795548'],
-        'contrast' => -5,
+        'bgImage' => true,
+        'bgColor' => '#002D85',
+        // 'fontColors' => ['#2c3e50', '#c0392b', '#16a085', '#c0392b', '#8e44ad', '#303f9f', '#f57c00', '#795548'],
+        'fontColors' => ['#002D85'],  // Warna font tetap biru untuk captcha flat
+        'contrast' => 5,
     ],
     'mini' => [
         'length' => 3,
         'width' => 60,
         'height' => 32,
+        'fontColors' => ['#002D85'],
     ],
     'inverse' => [
         'length' => 5,
@@ -47,5 +50,6 @@ return [
         'blur' => 2,
         'invert' => true,
         'contrast' => -5,
+        'fontColors' => ['#002D85'],
     ]
 ];
