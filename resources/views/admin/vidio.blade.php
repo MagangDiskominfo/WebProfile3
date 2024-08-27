@@ -1,6 +1,6 @@
 @extends('/admin/dashboard')
 @section('content')
-<div class="container" style="min-height: 74vh">
+<div class="container" style="min-height: 80vh">
     <div class="card rounded-3 shadow-sm">
         <div class="card-body mx-4 my-2">
             <form action="/vidio" method="POST" enctype="multipart/form-data">

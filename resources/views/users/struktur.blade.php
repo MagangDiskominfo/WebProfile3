@@ -1,3 +1,11 @@
+<?php
+$warna = App\Models\Warna::first()->warna;
+?>
+<style>
+    :root {
+        --warna: {{ $warna }};
+    }
+</style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +18,8 @@
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
 </head>
 
-<body style="background-color: #002D85">
-    <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
+<body style="background-color: var(--warna)">
+    <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: var(--warna)">
         <div class="container custom-padding">
             <a class=" navbar-brand " href="#">
                 <img src="/storage/home/{{ $home->logo }}" alt="Logo" style="height: 40px;">
@@ -40,7 +48,7 @@
                             </ul>
                         </li>
                         <li class="nav-item ms-5">
-                            <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="/login">Masuk</a>
+                            <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3" style="color: var(--warna)" href="/login">Masuk</a>
                         </li>
                     </ul>
                 </div>
@@ -55,7 +63,7 @@
                         <div class="card struktur-card mt-5">
                             <div class="card-body ">
                                 {{-- <p class="text-center text-primary fs-1 fw-bold font-family-Poppins px-3 py-3">Lokasi</p> --}}
-                                <h2 class="text-center text-primary fw-bold m-4">Struktur Organisasi</h2>
+                                <h2 class="text-center fw-bold m-4" style="color: var(--warna)">Struktur Organisasi</h2>
                                 <div>
                                     <img src="/storage/struktur/{{ $strukturn->struktur_gambar }}" alt="Struktur" class="">
                                 </div>

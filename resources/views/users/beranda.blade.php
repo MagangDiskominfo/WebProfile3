@@ -73,7 +73,7 @@
         <section id="berita" class="news-section bg-white pb-4">
             <div class="container">
                 <p class="text-center fs-1 fw-bold font-family-Poppins m-0 px-3 py-4" style="color: var(--warna)">Berita</p>
-                <div id="newsCarouselBerita" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div id="newsCarouselBerita" class="carousel slide" data-bs-ride="carousel"> 
                     <div class="carousel-inner">
                         @foreach ($berita->chunk(3) as $chunk) <!-- Mengelompokkan 3 berita per slide -->
                             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
@@ -126,7 +126,7 @@
                                                 <div class="card-body news-card-body">
                                                     <h5 class="card-title">{{ $item->judul_kegiatan }}</h5>
                                                     <p class="card-text">{{ $item->excerpt }}</p>
-                                                    <a href="/users/detail-kegiatan/{{ $item->id }}" class="btn news-card-button">Baca Selengkapnya</a>
+                                                    <a href="/users/detail-kegiatan/{{ $item->id }}" class="btn news-card-button" style="background-color: var(--warna)">Baca Selengkapnya</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,21 +189,22 @@
                         <div class="card maps-card mx-3 border-0">
                             <div class="card-body">
                                 <div class="pt-2">
-                                    <a class="fw-bold text-primary" href="{{ $item->yt_link }}" style="margin-right: 3rem; text-decoration: none;">
-                                        <i class="bi bi-youtube" style="font-size: 1.5rem;" ></i>
+                                    <a class="fw-bold" href="{{ $item->yt_link }}" style="margin-right: 3rem; text-decoration: none;">
+                                        <i class="bi bi-youtube" style="font-size: 1.5rem; color: #FF0000;"></i> <!-- YouTube -->
                                     </a>
-                                    <a class="fw-bold text-primary" href="{{ $item->ig_link }}" style="margin-right: 3rem; text-decoration: none;">
-                                        <i class="bi bi-instagram" style="font-size: 1.5rem;" ></i>
+                                    <a class="fw-bold" href="{{ $item->ig_link }}" style="margin-right: 3rem; text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 1.5rem; color: #C13584;"></i> <!-- Instagram -->
                                     </a>
-                                    <a class="fw-bold text-primary" href="{{ $item->fb_link }}" style="margin-right: 3rem; text-decoration: none;">
-                                        <i class="bi bi-facebook" style="font-size: 1.5rem;" ></i>
+                                    <a class="fw-bold" href="{{ $item->fb_link }}" style="margin-right: 3rem; text-decoration: none;">
+                                        <i class="bi bi-facebook" style="font-size: 1.5rem; color: #1877F2;"></i> <!-- Facebook -->
                                     </a>
-                                    <a class="fw-bold text-primary" href="{{ $item->x_link }}" style="text-decoration: none;">
-                                        <i class="bi bi-twitter-x" style="font-size: 1.5rem;" ></i>
+                                    <a class="fw-bold" href="{{ $item->x_link }}" style="text-decoration: none;">
+                                        <i class="bi bi-twitter-x" style="font-size: 1.5rem; color: #000000;"></i> <!-- X (formerly Twitter) -->
                                     </a>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 @endforeach
