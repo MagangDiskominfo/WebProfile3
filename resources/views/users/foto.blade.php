@@ -67,11 +67,12 @@
                     <div class="card struktur-card mt-5">
                         <div class="card-body mb-5">
                             <h1 class="fw-bold fs-1 mb-4">Galeri</h1>
-                            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div id="carouselFoto" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
+                                    @foreach ($foto->chunk(6) as $chunk) <!-- Mengelompokkan 9 item per slide -->
+                                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                         <div class="row">
-                                            @foreach ($foto as $item  )
+                                            @foreach ($chunk as $item  )
                                             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                                 <img src="/storage/foto/{{ $item->foto }}"
                                                     class="d-block w-100 rounded-3" alt="...">
@@ -80,18 +81,27 @@
                                             @endforeach
                                         </div>
                                     </div>
+                                    @endforeach
 
                                 </div>
-                                <div class="carousel-control-custom">
+                                {{-- <div class="carousel-control-custom">
                                     <button class="carousel-control-prev-custom" type="button"
-                                        data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        data-bs-target="#carouselBerita" data-bs-slide="prev">
                                         <span aria-hidden="true">Sebelumnya</span>
                                     </button>
                                     <button class="carousel-control-next-custom" type="button"
-                                        data-bs-target="#carouselExample" data-bs-slide="next">
+                                        data-bs-target="#carouselBerita" data-bs-slide="next">
                                         <span aria-hidden="true">Selanjutnya</span>
                                     </button>
-                                </div>
+                                </div> --}}
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFoto" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFoto" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -133,14 +143,14 @@
         </div>
     </footer>
 
-    <script>
+    {{-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             let savedColor = localStorage.getItem('backgroundColor');
             if (savedColor) {
                 document.body.style.backgroundColor = savedColor;
             }
         });
-    </script>
+    </script> --}}
 
     <!-- Bootstrap JS Bundle (Popper.js included) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

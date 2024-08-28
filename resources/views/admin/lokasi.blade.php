@@ -25,7 +25,7 @@
                     <label for="email">Email Instansi</label>
                     <input type="email" class="form-control" id="email" name="email_instansi" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 </div>
-                <h6>Media Sosial</h6>
+                <h5 class="font-weight-bold">Media Sosial</h5>
                 <div class="form-group">
                     <label for="yt">Link Youtube (URL)</label>
                     <input type="text" id="yt" name="yt_link" placeholder="Masukkan link Yt (mis. https://youtube.com)" required>

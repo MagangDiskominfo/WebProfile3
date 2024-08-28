@@ -47,7 +47,7 @@
                                         alt="{{ $kegiatan->judul_kegiatan }}" width="100"></td>
                                 <td>
                                     <!-- Tambahkan tombol edit dan delete -->
-                                    <a href="/kegiatan/edit/{{ $kegiatan->id }}" class="btn btn-success">Edit</a>
+                                    <a href="/kegiatan/edit/{{ $kegiatan->id }}" class="btn btn-success mb-3">Edit</a>
                                     <a href="/kegiatan/delete/{{ $kegiatan->id }}" class="btn btn-danger">Delete</a>
                                 </td>
                                 <td>

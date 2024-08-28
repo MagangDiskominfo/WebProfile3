@@ -6,10 +6,10 @@
         <div class="card-body mx-4 my-2">
             <form action="/warna" method="POST" enctype="multipart/form-data">
                 <h2 class="font-weight-bold">Atur Warna Website</h2>
-                <p>Silahkan isi dengan benar untuk Warna Website mu!</p>
+                <p>Silahkan pilih warna Website Instansimu!</p>
                 @csrf
                 <div class="form-group">
-                    <label for="warna">Warna Backgorund</label>
+                    <label for="warna">Pilih Warna Website</label>
                     <input type="color" class="form-control" id="warna" name="warna">
                 </div>       
                 <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>

@@ -6,7 +6,7 @@
             <div class="card-body mx-4 my-2">
                 <form action="/berita" method="POST" enctype="multipart/form-data">
                     <h2 class="font-weight-bold">Atur Berita Website</h2>
-                    <p>Silahkan isi dengan benar untuk membuat Berita Website mu!</p>
+                    <p>Silahkan isi dengan benar untuk membuat Berita Websitemu!</p>
                     @csrf
                     <div class="form-group">
                         <label for="title">Judul Berita</label>

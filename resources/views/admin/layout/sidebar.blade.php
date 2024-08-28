@@ -34,7 +34,7 @@
                             <a class="nav-link" href="/lokasi">Lokasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/visimisi">VisiMisi</a>
+                            <a class="nav-link" href="/visimisi">Visi Misi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/struktur">Struktur</a>
