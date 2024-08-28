@@ -9,8 +9,8 @@
                 <p>Silahkan isi dengan benar untuk membuat Footer Websitemu!</p>
                 @csrf
                 <div class="form-group">
-                    <label for="footer">Footer</label>
-                    <input type="text"  class="form-control" id="footer" name="copyright" placeholder="Masukkan Footer Instansi">
+                    <label for="footer">Footer (*Nama Instansi)</label>
+                    <input type="text" class="form-control" id="footer" name="copyright" placeholder="Masukkan Footer Instansi">
                 </div>       
                 <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
             </form>

@@ -1,3 +1,11 @@
+<?php
+$warna = App\Models\Warna::first()->warna;
+?>
+<style>
+    :root {
+        --warna: {{ $warna }};
+    }
+</style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +17,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/beranda.css') }}">
 </head>
-<body style="background-color: #002D85">
-    <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: #002D85">
+<body style="background-color: var(--warna)">
+    <nav class="navbar navbar-expand-lg shadow-lg " style="background-color: var(--warna)">
         <div class="container custom-padding">
             <a class="navbar-brand" href="#">
                 <img src="/storage/home/{{ $home->logo }}" alt="Logo" style="height: 40px;">
@@ -39,7 +47,7 @@
                         </ul>
                     </li>
                     <li class="nav-item ms-5">
-                        <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3 text-primary" href="/login">Masuk</a>
+                        <a class="nav-link fs-6 fw-bold font-family-Poppins bg-white rounded-3 shadow px-3" style="color: var(--warna)" href="/login">Masuk</a>
                     </li>
                 </ul>
             </div>
@@ -53,9 +61,9 @@
                     <div class="col text-center">
                         <div class="card visimisi-card mt-5">
                             <div class="card-body">
-                                <h2 class="text-center text-primary fw-bold m-4">Visi</h2>
+                                <h2 class="text-center fw-bold m-4" style="color: var(--warna)">Visi</h2>
                                 <p class="text-center text-dark fw-bold fs-4 mb-5">{{ $visimisin->visi }}</p>
-                                <h2 class="text-center text-primary fw-bold mb-4">Misi</h2>
+                                <h2 class="text-center fw-bold mb-4" style="color: var(--warna)">Misi</h2>
                                 <div class="text-start text-dark fw-bold fs-5 mb-4" style="margin-left: 3rem; margin-right: 3rem;">
                                     <div>{{ $visimisin->misi }}</div>
                                 </div>
