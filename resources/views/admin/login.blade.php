@@ -126,7 +126,7 @@
     <div class="container">
         <div class="left">
             <div class="logo">
-                <img src="../img/login.png" alt="">
+                <img src="../img/kotajambi.png" alt="">
             </div>
             <h3 class="text-white font-family-Poppins"><b>{{ $home->nama_instansi }}</b></h3>
         </div>

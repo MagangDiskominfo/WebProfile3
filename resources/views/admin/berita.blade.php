@@ -13,12 +13,12 @@
                         <input type="text" class="form-control" id="title" name="title" required>
                     </div>
                     <div class="form-group">
-                        <label for="image">Gambar Berita</label>
-                        <input type="file" class="form-control-file" id="image_berita" name="image_berita" required>
-                    </div>
-                    <div class="form-group">
                         <label for="description">Deskripsi Berita</label>
                         <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Gambar Berita</label>
+                        <input type="file" class="form-control-file" id="image_berita" name="image_berita" required>
                     </div>
                     <button type="submit" class="font-weight-bold text-white">Simpan Perubahan</button>
                 </form>
