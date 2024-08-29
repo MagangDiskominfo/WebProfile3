@@ -41,8 +41,8 @@
                             <div class="card header-card">
                                 <div class="card-body ">
                             <div class="mt-0 text-center">
-                                <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-2" style="max-width: 200px; margin-right:2rem;">
-                                <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-2" style="max-width: 200px;">
+                                <img src="/storage/home/{{ $home[0]->gambar_ketua }}" class="img-fluid mb-2" style="max-width: 180px; margin-right:2rem;">
+                                <img src="/storage/home/{{ $home[0]->gambar_wakil }}" class="img-fluid mb-2" style="max-width: 180px;">
                                 <div class="row">
                                     <div class="col-md-6 text-center">
                                         <p>{{ $home[0]->nama_ketua }}</p>

@@ -81,7 +81,7 @@ $warna = App\Models\Warna::first()->warna;
                             <h1 class="fw-bold fs-1 mb-4">Galeri</h1>
                             <div id="carouselFoto" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    @foreach ($foto->chunk(6) as $chunk) <!-- Mengelompokkan 9 item per slide -->
+                                    @foreach ($foto->chunk(9) as $chunk) <!-- Mengelompokkan 9 item per slide -->
                                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                         <div class="row">
                                             @foreach ($chunk as $item  )
@@ -94,26 +94,25 @@ $warna = App\Models\Warna::first()->warna;
                                         </div>
                                     </div>
                                     @endforeach
-
                                 </div>
-                                {{-- <div class="carousel-control-custom">
+                                <div class="carousel-control-custom">
                                     <button class="carousel-control-prev-custom" type="button"
-                                        data-bs-target="#carouselBerita" data-bs-slide="prev">
+                                        data-bs-target="#carouselFoto" data-bs-slide="prev">
                                         <span aria-hidden="true">Sebelumnya</span>
                                     </button>
                                     <button class="carousel-control-next-custom" type="button"
-                                        data-bs-target="#carouselBerita" data-bs-slide="next">
+                                        data-bs-target="#carousel" data-bs-slide="next">
                                         <span aria-hidden="true">Selanjutnya</span>
                                     </button>
-                                </div> --}}
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFoto" data-bs-slide="prev">
+                                </div>
+                                {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselFoto" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
                                 <button class="carousel-control-next" type="button" data-bs-target="#carouselFoto" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
-                                </button>
+                                </button> --}}
                             </div>
                         </div>
                     </div>
