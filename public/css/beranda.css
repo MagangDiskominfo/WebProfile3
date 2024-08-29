@@ -78,36 +78,73 @@ body {
 /* .news-section {
     padding: 50px 0;
 } */
-.news-title {
-    text-align: center;
-    color: #002D85;
-    margin-bottom: 30px;
-}
+
 .news-card {
     border: none;
     border-radius: 15px;
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 5;
     margin: 20px;
-    
 }
-.news-card img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
+
 .news-card-body {
     padding: 20px;
 }
+
 .news-card-button {
     background-color: #002D85;
     color: white;
     border-radius: 15px;
     padding: 10px 20px;
 }
+
+.news-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%; /* Pastikan gambar memenuhi lebar kontainer */
+    height: 400px; /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover; /* Memastikan gambar menyesuaikan ruang tanpa mengubah rasio */
+}
+
+.activity-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    margin: 20px;
+    height: 95%;
+}
+
+.activity-card-body {
+    padding: 20px;
+}
+
+.activity-card-button {
+    background-color: #002D85;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.activity-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%; /* Pastikan gambar memenuhi lebar kontainer */
+    height: 400px; /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover; /* Memastikan gambar menyesuaikan ruang tanpa mengubah rasio */
+}
+
+/* .activity-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+
 .carousel-control-prev, .carousel-control-next {
     filter: invert(100%);
 }
-
 
 .maps-card {
     border-width: 3px; /* Atur lebar garis tepi */
@@ -179,35 +216,6 @@ body {
     margin-right:  15px;
 }
 
-
-/* Atur ukuran kartu kegiatan jika diperlukan */
-.news-card {
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin: 20px;
-}
-
-.activity-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.news-card img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 100%; /* Pastikan gambar memenuhi lebar kontainer */
-    height: 400px; /* Atur tinggi gambar sesuai kebutuhan */
-    object-fit: cover; /* Memastikan gambar menyesuaikan ruang tanpa mengubah rasio */
-}
-
-.news-card-body {
-    padding: 20px;
-}
-
 /* Atur kontainer deskripsi */
 .description-container {
     max-width: 70%; /* Setengah dari lebar halaman */
@@ -255,9 +263,6 @@ body {
 }
 
 
-.news-card {
-    margin-bottom: 20px;
-}
 
 .carousel-inner {
     padding: 0 15px;
