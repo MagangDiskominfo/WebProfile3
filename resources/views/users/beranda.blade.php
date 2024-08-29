@@ -162,16 +162,6 @@
             </div>
         </section>
         
-
-
-        {{-- <section id="kegiatan" class="py-5">
-            <div class="container">
-                <h2 class="text-white mb-4">Kegiatan</h2>
-                <p class="text-white">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id diam in leo eleifend fermentum. Nullam suscipit turpis nec lorem vehicula, ac rutrum orci efficitur.
-                </p>
-            </div>
-        </section> --}}
         <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
                 <p class="text-center fs-1 fw-bold font-family-Poppins px-3 py-3" style="color: var(--warna)">Lokasi</p>
