@@ -289,3 +289,10 @@ body {
 .social-icon:hover {
     transform: scale(1.1); /* Sedikit memperbesar icon saat di-hover */
 }
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
