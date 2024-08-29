@@ -3,11 +3,11 @@ body {
 }
 
 .text-primary {
-    color: #002D85 !important;
+    color: var(--warna) !important;
 }
 
 .bg-primary-custom {
-    color: #002D85 !important;
+    color: var(--warna) !important;
 }
 
 /* Style untuk navbar yang dapat digeser ke kiri dan kanan */
@@ -111,7 +111,7 @@ body {
 
 .maps-card {
     border-width: 3px; /* Atur lebar garis tepi */
-    border-color: #002D85 ; /* Atur warna garis tepi, bisa disesuaikan sesuai keinginan */
+    border-color: var(--warna) ; /* Atur warna garis tepi, bisa disesuaikan sesuai keinginan */
     width: auto; /* Sesuaikan lebar kartu dengan konten di dalamnya */
     display: inline-block; /* Agar lebar kartu sesuai dengan konten */
     /* margin-top: 20px; */
@@ -275,4 +275,17 @@ body {
     background-size: cover;
     background-position: center center; 
     min-height: 713px; /* Sesuaikan tinggi sesuai kebutuhan */
+}
+
+
+.social-icon {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 3px solid  var(--warna) ; /* Menambahkan border berwarna biru */
+    border-radius: 5%; /* Membuat border menjadi bulat */
+    transition: transform 0.3s ease; /* Untuk efek halus saat hover */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Sedikit memperbesar icon saat di-hover */
 }

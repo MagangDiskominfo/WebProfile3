@@ -81,8 +81,7 @@
                                     @foreach ($chunk as $item)
                                         <div class="col-md-4">
                                             <div class="card news-card">
-                                                <img src="/storage/berita/{{ $item->image_berita }}"
-                                                    class="card-img-top" alt="{{ $item->title }}">
+                                                <img src="/storage/berita/{{ $item->image_berita }}" class="card-img-top" alt="{{ $item->title }}">
                                                 <div class="card-body news-card-body">
                                                     <h5 class="card-title">{{ $item->title }}</h5>
                                                     <p class="card-text">{{ $item->excerpt }}</p>
@@ -111,7 +110,7 @@
         
 
         <!-- Section Kegiatan -->
-        <section id="kegiatan" class="news-section bg-primary-custom pb-4">
+        <section id="kegiatan" class="news-section bg-primary-custom pb-4 py-1">
             <div class="container">
                 <p class="text-center text-white fs-1 fw-bold font-family-Poppins m-0 px-3 py-4">Kegiatan</p>
                 <div id="newsCarouselKegiatan" class="carousel slide" data-bs-ride="carousel">
@@ -186,19 +185,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card maps-card mx-3 border-0">
+                        <div class="card maps-card mx-1 border-0">
                             <div class="card-body">
                                 <div class="pt-2">
-                                    <a class="fw-bold" href="{{ $item->yt_link }}" style="margin-right: 3rem; text-decoration: none;">
+                                    <a class="social-icon" href="{{ $item->yt_link }}" style="margin-right: 1.5rem; text-decoration: none;">
                                         <i class="bi bi-youtube" style="font-size: 1.5rem; color: #FF0000;"></i> <!-- YouTube -->
                                     </a>
-                                    <a class="fw-bold" href="{{ $item->ig_link }}" style="margin-right: 3rem; text-decoration: none;">
+                                    <a class="social-icon" href="{{ $item->ig_link }}" style="margin-right: 1.5rem; text-decoration: none;">
                                         <i class="bi bi-instagram" style="font-size: 1.5rem; color: #C13584;"></i> <!-- Instagram -->
                                     </a>
-                                    <a class="fw-bold" href="{{ $item->fb_link }}" style="margin-right: 3rem; text-decoration: none;">
+                                    <a class="social-icon" href="{{ $item->fb_link }}" style="margin-right: 1.5rem; text-decoration: none;">
                                         <i class="bi bi-facebook" style="font-size: 1.5rem; color: #1877F2;"></i> <!-- Facebook -->
                                     </a>
-                                    <a class="fw-bold" href="{{ $item->x_link }}" style="text-decoration: none;">
+                                    <a class="social-icon" href="{{ $item->x_link }}" style="text-decoration: none;">
                                         <i class="bi bi-twitter-x" style="font-size: 1.5rem; color: #000000;"></i> <!-- X (formerly Twitter) -->
                                     </a>
                                 </div>

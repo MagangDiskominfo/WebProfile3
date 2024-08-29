@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi Kegiatan</label>
-                    <textarea id="deskripsi" name="deskripsi_kegiatan" placeholder="Masukkan Deskripsi Kegiatan"></textarea>
+                    <textarea id="deskripsi" name="deskripsi_kegiatan" rows="5" placeholder="Masukkan Deskripsi Kegiatan"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="image">Gambar Kegiatan</label>
