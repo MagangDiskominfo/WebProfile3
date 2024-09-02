@@ -85,7 +85,7 @@
         </section> --}}
 
         <!-- Section Berita -->
-        <section id="berita" class="news-section bg-white pb-4">
+        <section id="berita" class=" bg-white pb-4">
             <div class="container">
                 <p class="text-center fs-1 fw-bold font-family-Poppins m-0 px-3 py-4" style="color: var(--warna)">Berita</p>
                 <div id="newsCarouselBerita" class="carousel slide" data-bs-ride="carousel"> 
@@ -100,8 +100,7 @@
                                                 <div class="card-body news-card-body">
                                                     <h5 class="card-title">{{ $item->title }}</h5>
                                                     <p class="card-text">{{ $item->excerpt }}</p>
-                                                    <a href="/users/detail-berita/{{ $item->id }}"
-                                                        class="btn news-card-button" style="background-color: var(--warna)">Baca Selengkapnya</a>
+                                                    <a href="/users/detail-berita/{{ $item->id }}" class="btn news-card-button" style="background-color: var(--warna)">Baca Selengkapnya</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,7 +124,7 @@
         
 
         <!-- Section Kegiatan -->
-        <section id="kegiatan" class="news-section bg-primary-custom pb-4 py-1">
+        <section id="kegiatan" class=" bg-primary-custom pb-4 py-1">
             <div class="container">
                 <p class="text-center text-white fs-1 fw-bold font-family-Poppins m-0 px-3 py-4">Kegiatan</p>
                 <div id="newsCarouselKegiatan" class="carousel slide" data-bs-ride="carousel">
@@ -135,12 +134,12 @@
                                 <div class="row">
                                     @foreach ($chunk as $item)
                                         <div class="col-md-4">
-                                            <div class="card news-card">
-                                                <img src="storage/kegiatan/{{ $item->gambar_kegiatan }}" class="card-img-top kegiatan-image" alt="{{ $item->judul_kegiatan }}">
-                                                <div class="card-body news-card-body">
+                                            <div class="card activity-card">
+                                                <img src="storage/kegiatan/{{ $item->gambar_kegiatan }}" class="card-img-top" alt="{{ $item->judul_kegiatan }}">
+                                                <div class="card-body activity-card-body">
                                                     <h5 class="card-title">{{ $item->judul_kegiatan }}</h5>
                                                     <p class="card-text">{{ $item->excerpt }}</p>
-                                                    <a href="/users/detail-kegiatan/{{ $item->id }}" class="btn news-card-button" style="background-color: var(--warna)">Baca Selengkapnya</a>
+                                                    <a href="/users/detail-kegiatan/{{ $item->id }}" class="btn activity-card-button" style="background-color: var(--warna)">Baca Selengkapnya</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,16 +162,6 @@
             </div>
         </section>
         
-
-
-        {{-- <section id="kegiatan" class="py-5">
-            <div class="container">
-                <h2 class="text-white mb-4">Kegiatan</h2>
-                <p class="text-white">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id diam in leo eleifend fermentum. Nullam suscipit turpis nec lorem vehicula, ac rutrum orci efficitur.
-                </p>
-            </div>
-        </section> --}}
         <section id="lokasi" class=" pb-4 py-1 bg-white">
             <div class="container">
                 <p class="text-center fs-1 fw-bold font-family-Poppins px-3 py-3" style="color: var(--warna)">Lokasi</p>
