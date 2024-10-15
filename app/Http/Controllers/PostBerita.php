@@ -12,7 +12,6 @@ class PostBerita extends Controller
     public function berita()
     {
         return view('admin.berita', ['beritas'=> Berita::all(),]);
-        
     }
 
     public function detail($id){

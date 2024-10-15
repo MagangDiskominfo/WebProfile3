@@ -63,10 +63,19 @@ $warna = App\Models\Warna::first()->warna;
                             <div class="card-body">
                                 <h2 class="text-center fw-bold m-4" style="color: var(--warna)">Visi</h2>
                                 <p class="text-center text-dark fw-bold fs-4 mb-5">{{ $visimisin->visi }}</p>
-                                <h2 class="text-center fw-bold mb-4" style="color: var(--warna)">Misi</h2>
+                                
+                                {{-- <h2 class="text-center fw-bold mb-4" style="color: var(--warna)">Misi</h2>
                                 <div class="text-start text-dark fw-bold fs-5 mb-4" style="margin-left: 3rem; margin-right: 3rem;">
                                     <div>{{ $visimisin->misi }}</div>
-                                </div>
+                                </div> --}}
+                                <h2 class="text-center fw-bold mb-4" style="color: var(--warna)">Misi</h2>
+<ol class="text-start text-dark fw-bold fs-5 mb-4" style="margin-left: 3rem; margin-right: 3rem;">
+    @foreach($misi_array as $misi)
+        <li>{{ $misi }}</li>
+    @endforeach
+</ol>
+
+
                             </div>
                         </div>
                     </div>
